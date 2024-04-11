@@ -6,6 +6,8 @@
   --secondary-font-color: #333333;
   --lighter-font-color: #666666;
   box-sizing: border-box;
+
+  overscroll-behavior: none;
 }
 
 body {
@@ -40,7 +42,7 @@ body {
   src: url('../fonts/PlayfairDisplay-Regular.ttf') format('ttf');
 }
 
-@font-face{
+@font-face {
   font-family: 'Roboto Thin';
   font-style: normal;
   src: url('../fonts/Roboto-Thin.ttf') format('ttf');
