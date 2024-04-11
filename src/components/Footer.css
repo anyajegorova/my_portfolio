@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    user-select: none;
+}
+
+.copyright_wrapper h3 {
+    margin: 0;
+    padding: 1.2em;
+    font-size: 0.6em;
+    font-weight: 300;
+}
+
+.social_media_wrapper {
+    display: flex;
+    gap: 1em;
+    padding: 0 1em;
+}
+
+.social_media_wrapper a svg {
+    width: 1em;
+    cursor: pointer;
+}
