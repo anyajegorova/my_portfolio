@@ -1,9 +1,9 @@
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ handleScroll }) => {
     return (
         <nav className='navigation'>
-            <h3>Contact</h3>
+            <h3 onClick={handleScroll}>Contact</h3>
         </nav>
     )
 }

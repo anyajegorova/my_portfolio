@@ -2,7 +2,7 @@ import './Contact.css';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 
-const Contact = () => {
+const Contact = ({anchorRef}) => {
     const form = useRef();
 
     const handleClick = (event) => {
@@ -31,7 +31,7 @@ const Contact = () => {
                 <label htmlFor="user_email">Email</label>
                 <input type='email' name='user_email' placeholder='Email' />
                 <label htmlFor="message">Message</label>
-                <textarea placeholder='Message' name='message'></textarea>
+                <textarea placeholder='Message' name='message' ref={anchorRef}></textarea>
                 <button type='submit'>Send</button>
             </form>
 

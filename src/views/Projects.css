@@ -25,6 +25,7 @@
     cursor: pointer;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.3s;
+    font-family: 'PlayfairDisplay';
 }
 
 .tab_container h2{
@@ -37,6 +38,13 @@
     border-bottom: 1px solid var(--primary-font-color);
 }
 
+.mockup_wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .mockup_wrapper img {
     width: 32em;
     max-width: 100dvw;
@@ -45,8 +53,9 @@
 .project_description_wrapper {
     max-width: 40em;
     font-size: 0.8em;
-    min-height: 4em;
-    color: var(--secondary-font-color);
+    min-height: 4.2em;
+    font-family: 'PlayfairDisplay';
+    color: var(--lighter-font-color);
     font-weight: 200;
     padding: 0 0.1em 1em 1em;
 }

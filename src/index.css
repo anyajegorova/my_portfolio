@@ -4,9 +4,8 @@
   --secondary-color: #f4f4f4;
   --primary-font-color: #202020;
   --secondary-font-color: #333333;
+  --lighter-font-color: #666666;
   box-sizing: border-box;
-
-
 }
 
 body {
@@ -25,6 +24,24 @@ body {
 
 @media (max-width: 468px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
+}
+
+@font-face {
+  font-family: 'Rinnero';
+  font-style: normal;
+  src: url('../fonts/Rinnero.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  font-style: normal;
+  src: url('../fonts/PlayfairDisplay-Regular.ttf') format('ttf');
+}
+
+@font-face{
+  font-family: 'Roboto Thin';
+  font-style: normal;
+  src: url('../fonts/Roboto-Thin.ttf') format('ttf');
 }

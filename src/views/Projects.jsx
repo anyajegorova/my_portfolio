@@ -1,5 +1,5 @@
 import './Projects.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import SayIt from '../assets/MacBookPro16_mockup_sayit.png';
 import GPT from '../assets/MacBookPro16_mockup_gpt.png';
 import SpaceX from '../assets/MacBookPro16_mockup_spaceX.png';
@@ -7,6 +7,7 @@ import TastyBites from '../assets/MacBookPro16_mockup_tastybites.png';
 import CatStore from '../assets/MacBookPro16_mockup_catstore.png';
 
 const Projects = () => {
+
 
     const projects = [
         {
@@ -54,7 +55,9 @@ const Projects = () => {
             </div>
             <div className='mockup_wrapper'>
                 {currentProject ?
-                    (<img src={currentProject.image} alt={currentProject.name}></img>)
+                    (
+                        <img src={currentProject.image} alt={currentProject.name} ></img>
+                    )
                     :
                     (<img src={SayIt}></img>)
                 }
