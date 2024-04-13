@@ -8,7 +8,6 @@ import CatStore from '../assets/MacBookPro16_mockup_catstore.png';
 
 const Projects = () => {
 
-
     const projects = [
         {
             name: 'SayIt!',
@@ -37,6 +36,8 @@ const Projects = () => {
         }
     ]
     const [currentProject, setCurrentProject] = useState(projects[0]);
+    const imageRef = useRef(null);
+
     const handleClick = (project) => {
         setCurrentProject(project)
     }
@@ -56,7 +57,11 @@ const Projects = () => {
             <div className='mockup_wrapper'>
                 {currentProject ?
                     (
-                        <img src={currentProject.image} alt={currentProject.name} ></img>
+                        <img src={currentProject.image}
+                            alt={currentProject.name}
+                            style={{ visibility: currentProject ? 'visible' : 'hidden' }}
+                            ref={imageRef}
+                        ></img>
                     )
                     :
                     (<img src={SayIt}></img>)
