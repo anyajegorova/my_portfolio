@@ -8,6 +8,7 @@ const About = () => {
     useEffect(() => {
         setIsVisible(true);
     }, []);
+    
     return (
         <section className='about_section'>
             <div className='title_wrapper'>
