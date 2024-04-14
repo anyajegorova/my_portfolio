@@ -8,20 +8,28 @@ import { useRef } from 'react';
 
 function App() {
 
-  const anchorRef = useRef(null);
+  const anchorRefContact = useRef(null);
+  const anchorRefProject = useRef(null);
 
-  const handleScroll = () => {
-    if (anchorRef.current) {
-      anchorRef.current.scrollIntoView({ behavior: 'smooth' });
+  const handleProjectScroll = () => {
+    if (anchorRefProject.current) {
+      anchorRefProject.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest'});
+      console.log('Clicked')
+    }
+  }
+  const handleContactScroll = () => {
+    if (anchorRefContact.current) {
+      anchorRefContact.current.scrollIntoView({ behavior: 'smooth' });
+      console.log('Clicked')
     }
   }
 
   return (
     <>
-      <Navbar handleScroll={handleScroll} />
-      <About />
-      <Projects />
-      <Contact anchorRef={anchorRef} />
+      <Navbar handleScroll={handleContactScroll} />
+      <About handleScroll={handleProjectScroll} />
+      <Projects anchorRef={anchorRefProject} />
+      <Contact anchorRef={anchorRefContact} />
       <Footer />
     </>
   )

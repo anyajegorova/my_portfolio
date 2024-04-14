@@ -10,6 +10,35 @@
     gap: 3em;
 
     user-select: none;
+
+    position: relative;
+}
+
+.about_section button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 1s ease 3.2s;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: none;
+    width: 3em;
+    height: 3em;
+}
+
+.about_section button svg {
+    width: 100%;
+    cursor: pointer;
+}
+
+.about_section button.visible {
+    opacity: 0.5;
+    animation: jump 2s infinite;
 }
 
 .title_wrapper {
@@ -41,6 +70,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-bottom: 3em;
 }
 
 .info_wrapper {
@@ -96,12 +127,12 @@
 
 .technologies_container span:first-child {
     opacity: 0;
-    transition: opacity 1s ease 6s;
+    transition: opacity 1s ease 5.5s;
 }
 
 .technologies_container span:last-child {
     opacity: 0;
-    transition: opacity 1s ease 6s;
+    transition: opacity 1s ease 5.5s;
 }
 
 .technologies_container span.visible {
@@ -125,32 +156,32 @@
 
 .technologies_wrapper h3:first-child {
     opacity: 0;
-    transition: opacity 1s ease 3s;
+    transition: opacity 1s ease 2.5s;
 }
 
 .technologies_wrapper h3:nth-child(2) {
     opacity: 0;
-    transition: opacity 1s ease 3.5s;
+    transition: opacity 1s ease 3s;
 }
 
 .technologies_wrapper h3:nth-child(3) {
     opacity: 0;
-    transition: opacity 1s ease 4s;
+    transition: opacity 1s ease 3.5s;
 }
 
 .technologies_wrapper h3:nth-child(4) {
     opacity: 0;
-    transition: opacity 1s ease 4.5s;
+    transition: opacity 1s ease 4s;
 }
 
 .technologies_wrapper h3:nth-child(5) {
     opacity: 0;
-    transition: opacity 1s ease 5s;
+    transition: opacity 1s ease 4.5s;
 }
 
 .technologies_wrapper h3:nth-child(6) {
     opacity: 0;
-    transition: opacity 1s ease 5.5s;
+    transition: opacity 1s ease 5s;
 }
 
 .technologies_wrapper h3.visible {
@@ -164,4 +195,16 @@
         gap: 2em;
     }
 
+}
+
+@keyframes jump {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) translateY(-1em);
+    }
 }

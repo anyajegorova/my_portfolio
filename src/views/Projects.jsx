@@ -6,7 +6,7 @@ import SpaceX from '../assets/MacBookPro16_mockup_spaceX.png';
 import TastyBites from '../assets/MacBookPro16_mockup_tastybites.png';
 import CatStore from '../assets/MacBookPro16_mockup_catstore.png';
 
-const Projects = () => {
+const Projects = ({anchorRef}) => {
 
     const projects = [
         {
@@ -42,7 +42,7 @@ const Projects = () => {
         setCurrentProject(project)
     }
     return (
-        <section className='projects_section'>
+        <section className='projects_section' ref={anchorRef}>
             <div className='navigation_wrapper'>
                 {projects.map((project, index) => (
                     <div key={index} className='tab_container'>
@@ -54,7 +54,7 @@ const Projects = () => {
                     </div>
                 ))}
             </div>
-            <div className='mockup_wrapper'>
+            <div className='mockup_wrapper' >
                 {currentProject ?
                     (
                         <img src={currentProject.image}

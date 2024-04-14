@@ -1,14 +1,14 @@
 import './About.css';
 import { useState, useEffect } from 'react';
 
-const About = () => {
+const About = ({ handleScroll }) => {
 
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         setIsVisible(true);
     }, []);
-    
+
     return (
         <section className='about_section'>
             <div className='title_wrapper'>
@@ -43,6 +43,25 @@ const About = () => {
                 </div>
 
             </div>
+            <button onClick={handleScroll} className={`${isVisible ? 'visible' : ''}`}>
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg"
+                    stroke="#33333"><g id="SVGRepo_bgCarrier" strokeWidth="0">
+                    </g>
+                    <g id="SVGRepo_tracerCarrier" strokeLinecap="round"
+                        strokeLinejoin="round">
+                    </g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M6 9L12 15L18 9"
+                            stroke="#333333"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round">
+                        </path>
+                    </g>
+                </svg>
+            </button>
         </section>
     )
 }
