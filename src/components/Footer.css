@@ -12,7 +12,7 @@
     font-size: 0.6em;
     font-weight: 300;
     color: var(--secondary-font-color);
-    font-family: 'Roboto Thin';
+    font-family: 'Source Sans 3', sans-serif;
 }
 
 .social_media_wrapper {

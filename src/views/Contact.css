@@ -25,7 +25,7 @@ form {
 form h2 {
     font-size: 1em;
     font-weight: 200;
-    font-family: 'PlayfairDisplay';
+    font-family: 'Libre Baskerville';
 }
 
 form input {
@@ -40,7 +40,9 @@ form input {
 
 form input::placeholder,
 form textarea::placeholder {
-    font-family: 'Roboto Thin';
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 200;
+    opacity: 0.5;
     font-size: 1.2em;
     color: var(--secondary-font-color);
 }
@@ -49,7 +51,7 @@ form label {
     font-size: 0.8em;
     font-weight: 200;
     align-self: flex-start;
-    font-family: 'Roboto Thin';
+    font-family: 'Source Sans 3', sans-serif;
     color: var(--secondary-font-color);
     margin-left: 0.25em;
 }
@@ -77,7 +79,7 @@ form button {
     border-radius: 0.25em;
     padding: 0.5em;
     background-color: transparent;
-    font-family: 'Roboto Thin';
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 0.6em;
     color: var(--primary-font-color);
     margin: 2em 0 0 0;

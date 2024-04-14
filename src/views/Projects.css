@@ -25,7 +25,8 @@
     cursor: pointer;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.3s;
-    font-family: 'PlayfairDisplay';
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 300;
 }
 
 .tab_container h2{
@@ -53,8 +54,8 @@
 .project_description_wrapper {
     max-width: 40em;
     font-size: 0.8em;
-    min-height: 4.2em;
-    font-family: 'PlayfairDisplay';
+    min-height: 4.3em;
+    font-family: 'Source Sans 3', sans-serif;
     color: var(--lighter-font-color);
     font-weight: 200;
     padding: 0 0.1em 1em 1em;
