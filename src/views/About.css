@@ -86,6 +86,7 @@
 
     text-align: center;
     gap: 2rem;
+    
 }
 
 .info_wrapper h4 {
@@ -99,12 +100,12 @@
 
 .info_wrapper h4:first-child {
     opacity: 0;
-    transition: opacity 2s ease;
+    transition: opacity 1.5s ease;
 }
 
 .info_wrapper h4:last-child {
     opacity: 0;
-    transition: opacity 2s ease 1s;
+    transition: opacity 1.5s ease 0.7s;
 }
 
 .info_wrapper h4.visible {
@@ -127,12 +128,12 @@
 
 .technologies_container span:first-child {
     opacity: 0;
-    transition: opacity 1s ease 5s;
+    transition: opacity 1s ease 3.3s;
 }
 
 .technologies_container span:last-child {
     opacity: 0;
-    transition: opacity 1s ease 5s;
+    transition: opacity 1s ease 3.3s;
 }
 
 .technologies_container span.visible {
@@ -156,32 +157,32 @@
 
 .technologies_wrapper h3:first-child {
     opacity: 0;
-    transition: opacity 1s ease 2s;
+    transition: opacity 1s ease 1.5s;
 }
 
 .technologies_wrapper h3:nth-child(2) {
     opacity: 0;
-    transition: opacity 1s ease 2.5s;
+    transition: opacity 1s ease 1.8s;
 }
 
 .technologies_wrapper h3:nth-child(3) {
     opacity: 0;
-    transition: opacity 1s ease 3s;
+    transition: opacity 1s ease 2.1s;
 }
 
 .technologies_wrapper h3:nth-child(4) {
     opacity: 0;
-    transition: opacity 1s ease 3.5s;
+    transition: opacity 1s ease 2.4s;
 }
 
 .technologies_wrapper h3:nth-child(5) {
     opacity: 0;
-    transition: opacity 1s ease 4s;
+    transition: opacity 1s ease 2.7s;
 }
 
 .technologies_wrapper h3:nth-child(6) {
     opacity: 0;
-    transition: opacity 1s ease 4.5s;
+    transition: opacity 1s ease 3s;
 }
 
 .technologies_wrapper h3.visible {
