@@ -190,7 +190,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .all_info_container {
         flex-direction: column;
         gap: 2em;
