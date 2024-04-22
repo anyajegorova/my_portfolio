@@ -2,12 +2,36 @@
     background-color: var(--secondary-color);
     min-height: calc(100vh - 2em);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 
     user-select: none;
+    padding-left: 8em;
+}
 
+.cite_container {
+    position: relative;
+    margin-left: 2em;
+}
+
+.cite_container svg{
+    max-height: 4em;
+    position: absolute;
+    opacity: 0.05;
+}
+
+.cite_container p {
+    max-width: 30em;
+    font-family: 'Libre Baskerville';
+    font-size: 0.5em;
+    opacity: 0.7;
+    padding: 3em;
+}
+
+.contact_section p cite {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 1.2em;
 }
 
 form {
@@ -61,7 +85,7 @@ form textarea::placeholder {
 
 form label {
     font-size: 0.8em;
-    font-weight: 200;
+    font-weight: 300;
     align-self: flex-start;
     font-family: 'Source Sans 3', sans-serif;
     color: var(--secondary-font-color);
@@ -74,8 +98,6 @@ form textarea:focus::placeholder {
 }
 
 
-
-
 form button {
     width: 15em;
     border: 1px solid var(--primary-font-color);
@@ -85,7 +107,7 @@ form button {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 0.6em;
     color: var(--primary-font-color);
-    margin: 2em 0 0 0;
+    margin: 2em 0 2em 0;
     cursor: pointer;
 
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
@@ -96,4 +118,21 @@ form button:active {
     background-color: var(--secondary-font-color);
     color: var(--secondary-color);
     transition: all 0.3s;
+}
+
+@media screen and (max-width: 1200px) {
+    .contact_section {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    form h2 {
+        margin-bottom: 1.2em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    form textarea {
+        height: 10em;
+    }
 }

@@ -28,7 +28,7 @@ function App() {
     <>
       <Navbar handleScroll={handleContactScroll} />
       <About handleScroll={handleProjectScroll} />
-      <Projects anchorRef={anchorRefProject} />
+      <Projects anchorRef={anchorRefProject} handleScroll={handleContactScroll}/>
       <Contact anchorRef={anchorRefContact} />
       <Footer />
     </>

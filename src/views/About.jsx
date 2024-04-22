@@ -21,10 +21,10 @@ const About = ({ handleScroll }) => {
                 <div className='info_wrapper'>
                     <h4 className={`${isVisible ? 'visible' : ''}`}>
                         I utilize the best design practices
-                        for shaping holistic and modern interfaces
+                        for shaping <span style={{fontWeight: 400}}>holistic</span> and <span style={{fontWeight: 400}}>modern</span> interfaces
                     </h4>
                     <h4 className={`${isVisible ? 'visible' : ''}`}>
-                        .. and turn them into code using latest
+                        .. and turn them into code using <span style={{fontWeight: 400}}>latest </span> 
                         technologies
                     </h4>
                 </div>
