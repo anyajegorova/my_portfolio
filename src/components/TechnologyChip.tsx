@@ -10,7 +10,7 @@ const TechnologyChip: React.FC<TechnologyChipProps> = ({ image, text }) => {
   return (
     <div className='technology_chip'>
       <img src={image} alt={text} />
-      <span>{text}</span>
+      <span className='technology_chip_text'>{text}</span>
     </div>
   )
 }

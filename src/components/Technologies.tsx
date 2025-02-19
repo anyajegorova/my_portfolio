@@ -59,7 +59,7 @@ const technologies = [
 
 const Technologies = () => {
   return (
-    <div>
+    <div className="technologies_container">
       {technologies.map((tech, index) => (
         <TechnologyChip key={index} image={tech.image} text={tech.text} />
       ))}
