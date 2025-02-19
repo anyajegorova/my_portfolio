@@ -1,4 +1,4 @@
-import './Contact.css';
+import './styles/Contact.css';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 
