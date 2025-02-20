@@ -194,6 +194,14 @@
     opacity: 1;
 }
 
+.technology_chip {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.technology_chip.visible {
+    opacity: 1;
+}
 
 @media (max-width: 1200px) {
     .all_info_container {

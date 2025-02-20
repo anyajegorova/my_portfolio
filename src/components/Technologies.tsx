@@ -57,11 +57,21 @@ const technologies = [
   { image: Figma, text: 'Figma' },
 ]
 
-const Technologies = () => {
+interface TechnologiesProps {
+  isVisible: boolean;
+}
+
+const Technologies: React.FC<TechnologiesProps> = ({ isVisible }) => {
   return (
     <div className="technologies_container">
       {technologies.map((tech, index) => (
-        <TechnologyChip key={index} image={tech.image} text={tech.text} />
+        <TechnologyChip
+          key={tech.text}
+          image={tech.image}
+          text={tech.text}
+          className={isVisible ? 'visible' : ''}
+          style={{ transitionDelay: `${1.5 + index * 0.2 - (index * index * 0.003)}s` }}
+        />
       ))}
     </div>
   )

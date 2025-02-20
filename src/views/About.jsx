@@ -41,7 +41,7 @@ const About = ({ handleScroll }) => {
                     </div>
                     <span className={`${isVisible ? 'visible' : ''}`}> &#125; </span>
                 </div> */}
-        <Technologies />
+        <Technologies isVisible={isVisible} />
       </div>
       <button
         onClick={handleScroll}
