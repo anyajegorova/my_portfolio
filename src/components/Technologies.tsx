@@ -61,7 +61,7 @@ interface TechnologiesProps {
   isVisible: boolean;
 }
 
-const Technologies: React.FC<TechnologiesProps> = ({ isVisible }) => {
+const Technologies: React.FC<TechnologiesProps> = () => {
   return (
     <div className="technologies_container">
       {technologies.map((tech, index) => (
@@ -69,7 +69,6 @@ const Technologies: React.FC<TechnologiesProps> = ({ isVisible }) => {
           key={tech.text}
           image={tech.image}
           text={tech.text}
-          className={isVisible ? 'visible' : ''}
           style={{ transitionDelay: `${1.5 + index * 0.2 - (index * index * 0.003)}s` }}
         />
       ))}

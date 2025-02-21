@@ -1,0 +1,8 @@
+.about-section {
+    min-height: calc(100vh - 2em);
+    max-width: 100vw;
+    display: flex;
+    border-bottom: hairline solid var(--secondary-color);
+    align-items: center;
+    justify-content: center;
+}

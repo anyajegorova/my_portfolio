@@ -1,0 +1,14 @@
+button {
+  background-color: var(--faded-color-turquoise);
+  padding: 0.5em 1em;
+  border: 1px solid var(--full-color-turquoise);
+  border-radius: 1em;
+  color: var(--full-color-turquoise);
+  font-size: 0.5em;
+  font: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 0 0.5em var(--faded-color-turquoise);
+}

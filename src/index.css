@@ -1,10 +1,20 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  --primary-color: #ffff;
+  --primary-color-dark: #121212;
   --secondary-color: #f4f4f4;
-  --primary-font-color: #202020;
-  --secondary-font-color: #333333;
-  --lighter-font-color: #666666;
+  --faded-color-pink: #ff00557e;
+  --very-faded-color-pink: #ff00550c;
+  --full-color-pink: #ff0077;
+  --full-color-turquoise: #41ead4;
+  --faded-color-turquoise: #41ead41c;
+  --primary-font-color: #121212;
+  --text-color: #b0b0b0;
   box-sizing: border-box;
 }
 
@@ -12,9 +22,8 @@ body {
   min-height: 100dvh;
   margin: 0;
   font-size: 32px;
-  padding: 0 1em 0 1em;
+  background-color: var(--primary-color-dark);
 }
-
 
 @media (max-width: 648px) {
   body {

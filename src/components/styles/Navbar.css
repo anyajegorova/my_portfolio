@@ -1,16 +1,67 @@
 .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  user-select: none;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  width: 100%;
 }
 
 .navigation h3 {
-    margin: 0;
-    padding: 0.5em 1em 0.5em 0;
-    font-size: 0.8em;
-    font-weight: 300;
-    cursor: pointer;
-    font-family: 'Source Sans 3', sans-serif;
+  margin: 0;
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  color: var(--faded-color-pink);
+  font-family: "Montserrat", sans-serif;
+}
+
+.navigation h3:hover {
+  color: var(--full-color-pink);
+}
+
+.navigation h3.active {
+  border-bottom: var(--faded-color-pink) 1px solid;
+}
+
+.navigation h3:last-child {
+  margin-left: 4rem;
+  background-color: var(--faded-color-pink);
+  color: var(--primary-color-dark);
+  margin: 0.5rem 0.5rem;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.navigation h3:last-child:hover {
+  background-color: var(--full-color-pink);
+  box-shadow: 0 0 0.5rem 0.1rem var(--faded-color-pink);
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+
+  .navigation h3 {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .navigation h3:last-child {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  .navigation h3:last-child {
+    margin-left: 4rem;
+    background-color: var(--full-color-pink);
+    box-shadow: 0 0 0.5rem 0.1rem var(--faded-color-pink);
+    color: var(--primary-color-dark);
+    margin: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+  }
 }

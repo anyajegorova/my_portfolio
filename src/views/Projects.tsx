@@ -1,3 +1,4 @@
+import React from 'react';
 import './styles/Projects.css';
 import { useState, useRef } from 'react';
 import SayIt from '../assets/MacBookPro16_mockup_sayit.png';
