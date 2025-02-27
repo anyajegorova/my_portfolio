@@ -1,4 +1,4 @@
-button {
+/* .custom_button {
   background-color: var(--faded-color-turquoise);
   padding: 0.5em 1em;
   border: 1px solid var(--full-color-turquoise);
@@ -9,6 +9,46 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.custom_button:hover {
   box-shadow: 0 0 0.5em var(--faded-color-turquoise);
+} */
+
+
+.custom_button {
+  width: 160px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--full-color-turquoise);
+  outline: none;
+  position: relative;
+  transition: 1s ease-in-out;
+}
+
+.custom_button svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: var(--full-color-turquoise);
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.custom_button:hover {
+  background: var(--faded-color-turquoise);
+  box-shadow: 0 0 0.5em var(--faded-color-turquoise);
+}
+
+.custom_button:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.custom_button span {
+  color: var(--full-color-turquoise);
+  font-size: 18px;
+  font-weight: 100;
+  position: relative;
+  z-index: 1;
 }

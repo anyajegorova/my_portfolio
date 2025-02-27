@@ -1,11 +1,27 @@
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   user-select: none;
   padding: 0.5rem 1rem;
   position: fixed;
   width: 100%;
+  background-color: var(--primary-color-dark);
+  z-index: 100;
+}
+
+.navigation .logo {
+  margin-right: auto;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--full-color-pink);
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.navigation .logo:hover {
+  text-shadow: 0 0 10px var(--full-color-pink), 0 0 20px var(--full-color-pink), 0 0 30px var(--full-color-pink);
 }
 
 .navigation h3 {
@@ -16,6 +32,7 @@
   cursor: pointer;
   color: var(--faded-color-pink);
   font-family: "Montserrat", sans-serif;
+  transition: color 0.3s ease-in-out;
 }
 
 .navigation h3:hover {
@@ -28,15 +45,16 @@
 
 .navigation h3:last-child {
   margin-left: 4rem;
-  background-color: var(--faded-color-pink);
-  color: var(--primary-color-dark);
+  background-color: var(--very-faded-color-pink);
+  color: var(--full-color-pink);
   margin: 0.5rem 0.5rem;
-  border-radius: 1.5rem;
-  padding: 0.5rem 1.5rem;
+  border-radius: 1em;
+  border: 1px solid var(--full-color-pink);
+  padding: 0.5em 1em;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .navigation h3:last-child:hover {
-  background-color: var(--full-color-pink);
   box-shadow: 0 0 0.5rem 0.1rem var(--faded-color-pink);
 }
 
@@ -44,6 +62,10 @@
   .navigation {
     justify-content: space-between;
     padding: 0.5rem;
+  }
+
+  .navigation .logo {
+    font-size: 1.2rem;
   }
 
   .navigation h3 {

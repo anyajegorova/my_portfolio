@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/Projects.css';
+import './styles/Projects2.css';
 import { useRef } from 'react';
 
 const Projects = ({ anchorRef, handleScroll }) => {
@@ -7,6 +7,9 @@ const Projects = ({ anchorRef, handleScroll }) => {
 
     return (
         <section className='projects_section' ref={anchorRef}>
+            <div>
+                <h1>Projects</h1>
+            </div>
             <button onClick={handleScroll}>
                 <svg
                     viewBox="0 0 24 24"

@@ -8,13 +8,14 @@
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   --primary-color-dark: #121212;
   --secondary-color: #f4f4f4;
-  --faded-color-pink: #ff00557e;
-  --very-faded-color-pink: #ff00550c;
+  --faded-color-pink: #ff005567;
+  --very-faded-color-pink: #ff005517;
   --full-color-pink: #ff0077;
   --full-color-turquoise: #41ead4;
   --faded-color-turquoise: #41ead41c;
   --primary-font-color: #121212;
   --text-color: #b0b0b0;
+  --divider-color: #b0b0b057;
   box-sizing: border-box;
 }
 

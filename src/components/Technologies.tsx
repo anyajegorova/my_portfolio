@@ -58,7 +58,7 @@ const technologies = [
 ]
 
 interface TechnologiesProps {
-  isVisible: boolean;
+  isVisible?: boolean;
 }
 
 const Technologies: React.FC<TechnologiesProps> = () => {

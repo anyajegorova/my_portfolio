@@ -5,6 +5,7 @@ import About2 from './views/About2';
 import Projects2 from './views/Projects2';
 import { useRef } from 'react';
 import Technologies from './components/Technologies';
+import Divider from './components/Divider';
 
 function App() {
 
@@ -28,7 +29,9 @@ function App() {
     <>
       <Navbar handleScroll={handleContactScroll} />
       <About2 />
+      <Divider />
       <Projects2 anchorRef={anchorRefProject} handleScroll={handleContactScroll} />
+      <Divider />
       <Technologies/>
     </>
   )
