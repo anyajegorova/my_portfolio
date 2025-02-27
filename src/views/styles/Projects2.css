@@ -97,3 +97,14 @@
         transform: translate(-50%, -50%) translateY(-1em);
     }
 } */
+
+.projects_title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    text-align: flex-start;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    text-transform: uppercase;
+}

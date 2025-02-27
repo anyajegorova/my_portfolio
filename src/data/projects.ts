@@ -1,9 +1,9 @@
-import SayIt from '../assets/MacBookPro16_mockup_sayit.png';
-import GPT from '../assets/MacBookPro16_mockup_gpt.png';
-import SpaceX from '../assets/MacBookPro16_mockup_spaceX.png';
-import TastyBites from '../assets/MacBookPro16_mockup_tastybites.png';
-import CatStore from '../assets/MacBookPro16_mockup_catstore.png';
-import GymExercisePlanner from '../assets/MacBookPro16_mockup_gymexerciseplanner.png';
+import SayIt from '../assets/sayit_screenshot2.png';
+import GPT from '../assets/gpt_copy.png';
+import SpaceX from '../assets/spacex_api.png';
+import TastyBites from '../assets/tastybites_design.png';
+import CatStore from '../assets/cat_store.png';
+import GymExercisePlanner from '../assets/Gym_exercise_planner.png';
 
 export const projects = [
     {
