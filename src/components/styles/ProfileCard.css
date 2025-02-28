@@ -49,3 +49,50 @@
 .info_container span {
     color: var(--full-color-pink)
 }
+
+@media (max-width: 768px) {
+  .profile_card_container {
+    flex-direction: column;
+    padding: 1em;
+    gap: 2em;
+  }
+
+  .image_container img {
+    width: 8em;
+    height: 10em;
+  }
+
+  .info_container h2 {
+    font-size: 2em;
+  }
+
+  .info_container p {
+    font-size: 0.8em;
+    max-width: 20em;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile_card_container {
+    padding: 0.5em;
+    gap: 1em;
+  }
+
+  .image_container img {
+    width: 6em;
+    height: 8em;
+  }
+
+  .info_container h2 {
+    font-size: 1.6em;
+  }
+
+  .info_container p {
+    font-size: 0.6em;
+    max-width: 16em;
+  }
+
+  .image_container {
+    display: none;
+  }
+}

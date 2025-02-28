@@ -5,10 +5,10 @@ const Navbar = ({ handleScroll }) => {
     return (
         <nav className='navigation'>
             <h3 className='logo'>ANNA JEGOROVA</h3>
-            <h3 onClick={handleScroll}>About</h3>
-            <h3 onClick={handleScroll}>Projects</h3>
-            <h3 onClick={handleScroll}>Services</h3>
-            <h3 onClick={handleScroll}>Contact</h3>
+            <h3 className='nav-item' onClick={handleScroll}>About</h3>
+            <h3 className='nav-item' onClick={handleScroll}>Projects</h3>
+            <h3 className='nav-item' onClick={handleScroll}>Services</h3>
+            <h3 className='nav-item' onClick={handleScroll}>Contact</h3>
         </nav>
     )
 }

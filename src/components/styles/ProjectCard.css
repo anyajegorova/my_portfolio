@@ -18,6 +18,13 @@
     position: relative; 
 }
 
+@media (max-width: 768px) {
+    .project_card {
+        flex: 1 1 calc(100% - 2em);
+        max-width: calc(100% - 2em);
+    }
+}
+
 .project_card:hover {
     transform: scale(1.01);
 }

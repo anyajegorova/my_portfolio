@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   user-select: none;
-  padding: 0.5rem 1rem;
+  padding: 10px 20px;
   position: fixed;
   width: 100%;
   background-color: var(--primary-color-dark);
@@ -58,32 +58,38 @@
   box-shadow: 0 0 0.5rem 0.1rem var(--faded-color-pink);
 }
 
+.nav-item {
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
   .navigation {
-    justify-content: space-between;
-    padding: 0.5rem;
+    padding: 10px;
   }
 
   .navigation .logo {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
 
   .navigation h3 {
+    padding: 0.5rem 1rem;
     font-size: 1rem;
+  }
+
+  .navigation h3:last-child {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation h3 {
+    font-size: 0.9rem;
     padding: 0.5rem;
   }
 
   .navigation h3:last-child {
-    margin-left: 1rem;
-    padding: 0.5rem 1rem;
-  }
-  .navigation h3:last-child {
-    margin-left: 4rem;
-    background-color: var(--full-color-pink);
-    box-shadow: 0 0 0.5rem 0.1rem var(--faded-color-pink);
-    color: var(--primary-color-dark);
-    margin: 0.5rem 0.5rem;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.3rem 0.6rem;
+    margin-left: 0.3rem;
   }
 }
