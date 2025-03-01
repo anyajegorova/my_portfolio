@@ -14,3 +14,13 @@
     margin-left: 2em;
     text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+    .projects_title {
+        font-size: 1.8rem; 
+        margin-left: 1.1em;
+    }
+    .projects_section {
+        padding: 1em 0;
+    }
+}

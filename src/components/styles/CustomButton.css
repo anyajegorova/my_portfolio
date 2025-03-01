@@ -52,3 +52,13 @@
   position: relative;
   z-index: 1;
 }
+
+@media (max-width: 768px) {
+  .custom_button {
+    width: 120px; 
+    height: 30px; 
+  }
+  .custom_button span {
+    font-size: 14px; 
+  }
+}

@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
 
-const Projects = ({ anchorRef, handleScroll }) => {
+const Projects = ({ anchorRef }) => {
     const imageRef = useRef(null);
 
     return (
