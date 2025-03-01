@@ -2,11 +2,11 @@ import React from "react";
 import "./styles/About2.css";
 import ProfileCard from "../components/ProfileCard";
 
-const About = ({ anchorRef }) => {
+const About = ({ anchorRef, handleProjectScroll }) => {
 
     return (
         <section className="about-section" ref={anchorRef}>
-            <ProfileCard />
+            <ProfileCard handleProjectScroll={handleProjectScroll} />
         </section>
     );
 };

@@ -8,6 +8,7 @@ import { useRef } from 'react';
 import Divider from './components/Divider';
 import Contact from './views/Contact';
 import Footer from './components/Footer';
+import ProfileCard from './components/ProfileCard';
 
 function App() {
 
@@ -37,7 +38,7 @@ function App() {
   return (
     <>
       <Navbar handleAboutScroll={handleAboutScroll} handleProjectScroll={handleProjectScroll} handleContactScroll={handleContactScroll} />
-      <About2 anchorRef={anchorRefAbout} />
+      <About2 anchorRef={anchorRefAbout} handleProjectScroll={handleProjectScroll} />
       <Divider />
       <Projects2 anchorRef={anchorRefProject} />
       <Divider />

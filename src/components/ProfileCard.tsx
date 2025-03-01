@@ -3,7 +3,7 @@ import './styles/ProfileCard.css'
 import ProfileImage from '../assets/AnnaJegorova.png'
 import CustomButton from './CustomButton'
 
-const ProfileCard = () => {
+const ProfileCard = ({ handleProjectScroll }) => {
     return (
         <div className='profile_card_container'>
 
@@ -14,7 +14,7 @@ const ProfileCard = () => {
                     I am <span>Anna Jegorova</span> - a web developer with a passion for creating beautiful and functional websites. I have experience with both front-end and back-end technologies, and I am always looking to learn new things.
                 </p>
                 <div className='button_container'>
-                    <CustomButton text='See Projects' />
+                    <CustomButton text='See Projects' onClick={handleProjectScroll} />
                 </div>
 
             </div>

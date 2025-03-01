@@ -8,7 +8,7 @@ const Projects = ({ anchorRef }) => {
     const imageRef = useRef(null);
 
     return (
-        <section className='projects_section' ref={anchorRef}>
+        <section id="projects" className='projects_section' ref={anchorRef}>
             <div>
                 <h1 className='projects_title'>Projects</h1>
             </div>

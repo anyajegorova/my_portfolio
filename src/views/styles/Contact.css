@@ -158,3 +158,46 @@ form button:active {
         font-size: 1em;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .contact_section {
+        padding: 1em;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 1em;
+    }
+
+    form h2 {
+        font-size: 1.4em;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9rem;
+    }
+
+    form input::placeholder,
+    form textarea::placeholder {
+        font-size: 1em;
+    }
+
+    form button {
+        width: 100%;
+        font-size: 0.8em;
+    }
+
+    .cite_container p {
+        font-size: 0.5em;
+        padding: 2em;
+    }
+
+    .cite_container svg {
+        max-height: 3em;
+    }
+
+    .cite_container p cite {
+        font-size: 2em;
+    }
+}

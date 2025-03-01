@@ -54,6 +54,7 @@
   .profile_card_container {
     flex-direction: column;
     padding: 1em;
+    padding-top: 4em;
     gap: 3em;
   }
 
