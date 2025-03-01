@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es6", 
+    "module": "commonjs",
+    "strict": true, 
+    "esModuleInterop": true,
+    "skipLibCheck": true, 
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": "./",
+    "paths": {
+      "images": ["src/images.d.ts"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "src/images.d.ts" 
+  ],
+  "exclude": [
+    "node_modules",
+    "dist" 
+  ]
+}
