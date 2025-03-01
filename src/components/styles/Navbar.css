@@ -14,10 +14,10 @@
   margin-right: auto;
   font-size: 1.5rem;
   font-weight: 200;
-  color: var(--full-color-pink);
+  color: var(--text-color);
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  transition: text-shadow 0.3s ease-in-out;
+  font-family: "Red Hat Display", serif;
+  transition: text-shadow color 0.3s ease-in-out;
 }
 
 .navigation .logo:hover {

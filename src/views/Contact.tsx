@@ -26,7 +26,7 @@ const Contact = ({ anchorRef }) => {
     return (
         <section className='contact_section'>
             <form className='contact_form' ref={form} onSubmit={handleClick}>
-                <h2>Contact me now!</h2>
+                <h2>Let's Get in Touch.</h2>
                 <label htmlFor="user_name">Name</label>
                 <input type='text' name='user_name' placeholder='Name' />
                 <label htmlFor="user_email">Email</label>
@@ -36,10 +36,10 @@ const Contact = ({ anchorRef }) => {
                 <button type='submit'>Send</button>
             </form>
             <div className='cite_container'>
-                <svg fill="#333333"
+                <svg fill="#ffffff"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
-                    stroke="#333333">
+                    stroke="#ffffff">
                     <g id="SVGRepo_bgCarrier"
                         strokeWidth="0"></g>
                     <g id="SVGRepo_tracerCarrier"

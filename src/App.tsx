@@ -6,6 +6,8 @@ import Projects2 from './views/Projects2';
 import { useRef } from 'react';
 import Technologies from './components/Technologies';
 import Divider from './components/Divider';
+import Contact from './views/Contact';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -32,7 +34,10 @@ function App() {
       <Divider />
       <Projects2 anchorRef={anchorRefProject} handleScroll={handleContactScroll} />
       <Divider />
-      <Technologies/>
+      {/* <Technologies/> */}
+      <Divider />
+      <Contact anchorRef={anchorRefContact}/>
+      <Footer/>
     </>
   )
 }

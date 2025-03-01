@@ -1,12 +1,10 @@
 .contact_section {
-    background-color: var(--secondary-color);
     min-height: calc(100vh - 2em);
     display: flex;
     align-items: center;
     justify-content: center;
 
     user-select: none;
-    padding-left: 8em;
 }
 
 .cite_container {
@@ -22,20 +20,23 @@
 
 .cite_container p {
     max-width: 30em;
-    font-family: 'Libre Baskerville';
+    font-family: 'Montserrat';
     font-size: 0.5em;
     opacity: 0.7;
     padding: 3em;
+    color: var(--text-color);
 }
 
 .contact_section p cite {
     display: block;
     font-size: 2em;
     margin-bottom: 1.2em;
+    color: var(--text-color);
+    font-family: 'Montserrat';
 }
 
 form {
-    width: 20em;
+    width: 25em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,20 +48,27 @@ form {
 }
 
 form h2 {
-    font-size: 1em;
-    font-weight: 200;
-    font-family: 'Libre Baskerville';
+    font-size: 1.6em;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    color: var(--text-color);
+    align-self: flex-start;
 }
 
 form input {
     height: 3.5em;
     padding: 1em;
     width: 100%;
-    border: none;
+    border: 1px solid var(--divider-color);;
     border-radius: 0.25em;
+    color: var(--text-color);
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 1rem;
 
     box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    box-shadow: var(--divider-color) 0px 1px 2px 0px;
+    background-color: var(--primary-color-dark);
 }
 
 form textarea {
@@ -68,28 +76,33 @@ form textarea {
     height: 15em;
     padding: 1em;
     border-radius: 0.25em;
-    border: none;
+    border: 1px solid var(--divider-color);;
     resize: none;
+    color: var(--text-color);
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 1rem;
 
     box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    box-shadow: var(--divider-color) 0px 1px 2px 0px;
+    background-color: var(--primary-color-dark);
 }
 
 form input::placeholder,
 form textarea::placeholder {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Montserrat';
     font-weight: 200;
     opacity: 0.5;
     font-size: 1.2em;
-    color: var(--secondary-font-color);
+    color: var(--text-color);
 }
 
 form label {
-    font-size: 0.8em;
+    font-size: 0.6em;
     font-weight: 300;
     align-self: flex-start;
-    font-family: 'Source Sans 3', sans-serif;
-    color: var(--secondary-font-color);
+    font-family: 'Montserrat';
+    color: var(--text-color);
     margin-left: 0.25em;
 }
 
@@ -98,27 +111,25 @@ form textarea:focus::placeholder {
     color: transparent;
 }
 
-
 form button {
     width: 15em;
-    border: 1px solid var(--primary-font-color);
-    border-radius: 0.25em;
-    padding: 0.5em;
-    background-color: transparent;
-    font-family: 'Source Sans 3', sans-serif;
     font-size: 0.6em;
-    color: var(--primary-font-color);
-    margin: 2em 0 2em 0;
     cursor: pointer;
 
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    background-color: var(--very-faded-color-pink);
+    color: var(--full-color-pink);
+    margin: 2rem 0.5rem;
+    border-radius: 1em;
+    border: 1px solid var(--full-color-pink);
+    padding: 0.5em 1em;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 form button:hover,
 form button:active {
-    background-color: var(--secondary-font-color);
-    color: var(--secondary-color);
     transition: all 0.3s;
+    box-shadow: 0 0 0.5rem 0.1rem var(--faded-color-pink);
 }
 
 @media screen and (max-width: 1200px) {
