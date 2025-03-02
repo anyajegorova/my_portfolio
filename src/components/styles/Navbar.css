@@ -6,7 +6,8 @@
   padding: 10px 20px;
   position: fixed;
   width: 100%;
-  background-color: var(--primary-color-dark);
+  background-color: var(--background-color);
+  backdrop-filter: blur(10px);
   z-index: 100;
 }
 
