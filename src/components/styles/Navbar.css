@@ -40,7 +40,7 @@
 }
 
 .navigation h3.active {
-  border-bottom: var(--faded-color-pink) 1px solid;
+  color: var(--full-color-pink);
 }
 
 .navigation h3:last-child {
