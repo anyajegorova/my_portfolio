@@ -1,18 +1,24 @@
 import React from 'react'
 import './styles/ProjectCard.css'
 import CustomButton from './CustomButton'
+import ImageModal from './ImageModal'
 
 interface ProjectCardProps {
   name: string;
   image: string;
   description: string;
   gitHubLink?: string;
+  onImageClick: (image: string) => void;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, gitHubLink }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, gitHubLink, onImageClick }) => {
+  const handleImageClick = () => {
+    onImageClick(image);
+  };
+
   return (
     <div className='project_card'>
-      <div className='project_image'>
+      <div className='project_image' onClick={handleImageClick}>
         <img src={image} alt={name} />
       </div>
       <div className='project_content'>

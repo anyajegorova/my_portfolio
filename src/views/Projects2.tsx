@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
 
-const Projects = ({ anchorRef }) => {
+const Projects = ({ anchorRef, onImageClick }) => {
     const imageRef = useRef(null);
 
     return (
@@ -20,6 +20,7 @@ const Projects = ({ anchorRef }) => {
                         image={project.image}
                         description={project.description}
                         gitHubLink={project.gitHubLink}
+                        onImageClick={onImageClick}
                     />
                 ))}
             </div>

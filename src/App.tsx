@@ -7,12 +7,15 @@ import Divider from './components/Divider';
 import Contact from './views/Contact';
 import Footer from './components/Footer';
 import { ActiveSectionContext } from './context/ActiveSectionContext';
+import ImageModal from './components/ImageModal';
 
 function App() {
   const [activeSection, setActiveSection] = useState('');
   const anchorRefContact = useRef<HTMLDivElement>(null);
   const anchorRefProject = useRef<HTMLDivElement>(null);
   const anchorRefAbout = useRef<HTMLDivElement>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState('');
 
   const handleProjectScroll = () => {
     if (anchorRefProject.current) {
@@ -53,6 +56,16 @@ function App() {
     }
   };
 
+  const handleImageClick = (image: string) => {
+    setModalImage(image);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setModalImage('');
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -68,7 +81,7 @@ function App() {
       </div>
       <Divider />
       <div id="projects">
-        <Projects2 anchorRef={anchorRefProject} />
+        <Projects2 anchorRef={anchorRefProject} onImageClick={handleImageClick} />
       </div>
       <Divider />
       <Divider />
@@ -76,6 +89,7 @@ function App() {
         <Contact anchorRef={anchorRefContact} />
       </div>
       <Footer />
+      {isModalOpen && <ImageModal image={modalImage} onClose={handleCloseModal} />}
     </ActiveSectionContext.Provider>
   );
 }
