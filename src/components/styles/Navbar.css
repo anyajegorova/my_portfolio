@@ -85,12 +85,15 @@
 
 @media (max-width: 480px) {
   .navigation h3 {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     padding: 0.5rem;
   }
 
   .navigation h3:last-child {
     padding: 0.3rem 0.6rem;
     margin-left: 0.3rem;
+  }
+  .navigation .logo {
+    font-size: 0.7rem;
   }
 }
