@@ -61,4 +61,7 @@
   .custom_button span {
     font-size: 14px; 
   }
+  .custom_button svg {
+    display: none;
+  }
 }
