@@ -7,8 +7,8 @@
 }
 
 .project_card {
-    flex: 1 1 calc(50% - 2em); 
-    max-width: calc(50% - 2em); 
+    flex: 1 1 calc(33.33% - 2em);
+    max-width: calc(33.33% - 2em); 
     height: auto;
     border: 1px solid var(--divider-color);
     border-radius: 0.5em;
@@ -19,7 +19,14 @@
     background-color: var(--primary-color-dark);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1680px) {
+    .project_card {
+        flex: 1 1 calc(50% - 2em);
+        max-width: calc(50% - 2em);
+    }
+}
+
+@media (max-width: 992px) {
     .project_card {
         flex: 1 1 calc(100% - 2em);
         max-width: calc(100% - 2em);
@@ -67,6 +74,17 @@
     text-align: justify;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+}
+
+.project_technologies {
+    margin: 0.5em 0;
+    margin-top: 1em;
+    color: var(--text-color); 
+    font-size: 0.6em;
+    line-height: 1.2; 
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 .project_link {

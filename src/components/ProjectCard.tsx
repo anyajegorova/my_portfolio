@@ -1,17 +1,17 @@
 import React from 'react'
 import './styles/ProjectCard.css'
 import CustomButton from './CustomButton'
-import ImageModal from './ImageModal'
 
 interface ProjectCardProps {
   name: string;
   image: string;
   description: string;
+  technologies: string;
   gitHubLink?: string;
   onImageClick: (image: string) => void;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, gitHubLink, onImageClick }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, technologies, gitHubLink, onImageClick }) => {
   const handleImageClick = () => {
     onImageClick(image);
   };
@@ -24,6 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, git
       <div className='project_content'>
         <h3 className='project_title'>{name}</h3>
         <p className='project_description'>{description}</p>
+        <p className='project_technologies'>({technologies})</p> 
         {gitHubLink && (
           <a href={gitHubLink} className='project_link' target='_blank' rel='noopener noreferrer'>
             <CustomButton text="View on GitHub" />
