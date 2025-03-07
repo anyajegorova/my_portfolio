@@ -24,7 +24,7 @@ const Contact = ({ anchorRef }) => {
             )
     }
     return (
-        <section className='contact_section'>
+        <section className='contact_section' ref={anchorRef}>
             <form className='contact_form' ref={form} onSubmit={handleClick}>
                 <h2>Let's Get in Touch.</h2>
                 <label htmlFor="user_name">Name</label>
