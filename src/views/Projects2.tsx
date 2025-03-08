@@ -4,7 +4,12 @@ import { useRef } from 'react';
 import { projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
 
-const Projects = ({ anchorRef, onImageClick }) => {
+interface ProjectsProps {
+    anchorRef: React.RefObject<HTMLElement>;
+    onImageClick: (image: string) => void;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ anchorRef, onImageClick }) => {
     const imageRef = useRef(null);
 
     return (
