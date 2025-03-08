@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles/ProjectCard.css'
 import CustomButton from './CustomButton'
-import RevealSlide from '../reveal_components/RevealSlide'
+import Reveal from '../reveal_components/Reveal'
 
 interface ProjectCardProps {
   name: string;
@@ -23,9 +23,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, tec
         <img src={image} alt={name} />
       </div>
       <div className='project_content'>
-        <RevealSlide> <h3 className='project_title'>{name}</h3></RevealSlide>
-        <RevealSlide> <p className='project_description'>{description}</p></RevealSlide>
-        <RevealSlide> <p className='project_technologies'>({technologies})</p></RevealSlide>
+        <Reveal> <h3 className='project_title'>{name}</h3></Reveal>
+        <Reveal> <p className='project_description'>{description}</p></Reveal>
+        <Reveal> <p className='project_technologies'>({technologies})</p></Reveal>
         {gitHubLink && (
           <a href={gitHubLink} className='project_link' target='_blank' rel='noopener noreferrer'>
             <CustomButton text="View on GitHub" />
