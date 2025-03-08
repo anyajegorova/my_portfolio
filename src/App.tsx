@@ -3,7 +3,6 @@ import './App.css';
 import Navbar from './components/Navbar';
 import About2 from './views/About2';
 import Projects2 from './views/Projects2';
-import Divider from './components/Divider';
 import Contact from './views/Contact';
 import Footer from './components/Footer';
 import { ActiveSectionContext } from './context/ActiveSectionContext';
@@ -79,12 +78,9 @@ function App() {
       <div id="about">
         <About2 anchorRef={anchorRefAbout} handleProjectScroll={handleProjectScroll} />
       </div>
-      <Divider />
       <div id="projects">
         <Projects2 anchorRef={anchorRefProject} onImageClick={handleImageClick} />
       </div>
-      <Divider />
-      <Divider />
       <div id="contact">
         <Contact anchorRef={anchorRefContact} />
       </div>

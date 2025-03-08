@@ -9,8 +9,8 @@
 }
 
 .image_container img {
-  width: 10em;
-  height: 12em;
+  width: 12em; 
+  height: 14em; 
   overflow: hidden;
   margin-bottom: 1em;
   object-fit: cover;
@@ -59,8 +59,8 @@
   }
 
   .image_container img {
-    width: 9em;
-    height: 11em;
+    width: 11em; /* increased from 9em */
+    height: 13em; /* increased from 11em */
   }
 
   .info_container h2 {
@@ -81,8 +81,8 @@
   }
 
   .image_container img {
-    width: 8em;
-    height: 10em;
+    width: 10em; /* increased from 8em */
+    height: 12em; /* increased from 10em */
   }
 
   .info_container h2 {
@@ -102,8 +102,8 @@
   }
 
   .image_container img {
-    width: 6em;
-    height: 8em;
+    width: 8em; /* increased from 6em */
+    height: 10em; /* increased from 8em */
   }
 
   .info_container h2 {
