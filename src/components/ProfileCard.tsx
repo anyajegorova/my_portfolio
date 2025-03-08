@@ -3,7 +3,11 @@ import './styles/ProfileCard.css'
 import ProfileImage from '../assets/AnnaJegorova.png'
 import CustomButton from './CustomButton'
 
-const ProfileCard = ({ handleProjectScroll }) => {
+interface ProfileCardProps {
+    handleProjectScroll: () => void;
+}
+
+const ProfileCard: React.FC<ProfileCardProps> = ({ handleProjectScroll }) => {
     return (
         <div className='profile_card_container'>
 
