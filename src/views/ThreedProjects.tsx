@@ -1,11 +1,21 @@
 import React from 'react'
-import ThreeDView from 'src/components/ThreeDView'
+import ThreeDView from '../components/ThreedView'
+import './styles/ThreedProjects.css'
 
-const ThreeDProjects = () => {
+interface ThreeDProjectsProps {
+    anchorRef: React.RefObject<HTMLElement>;
+}
+
+
+
+const ThreeDProjects: React.FC<ThreeDProjectsProps> = ({ anchorRef }) => {
     return (
-        <div>
+        <section ref={anchorRef} id='threed' className='threed_section'>
+            <div>
+                <h1 className='projects_title'>3D Models</h1>
+            </div>
             <ThreeDView />
-        </div>
+        </section>
     )
 }
 

@@ -1,0 +1,27 @@
+.threed_section {
+    min-height: calc(100vh - 2em);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    align-items: center;
+}
+
+.projects_title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+@media (max-width: 768px) {
+    .threed_section {
+        padding: 1em 0;
+    }
+    .projects_title {
+        font-size: 1.8rem;
+    }
+}

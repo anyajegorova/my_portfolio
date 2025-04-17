@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import About2 from './views/About2';
 import Projects2 from './views/Projects2';
+import ThreeDProjects from './views/ThreedProjects';
 import Contact from './views/Contact';
 import Footer from './components/Footer';
 import { ActiveSectionContext } from './context/ActiveSectionContext';
@@ -12,6 +13,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('');
   const anchorRefContact = useRef<HTMLDivElement>(null);
   const anchorRefProject = useRef<HTMLDivElement>(null);
+  const anchorRefThreeDProject = useRef<HTMLDivElement>(null);
   const anchorRefAbout = useRef<HTMLDivElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState('');
@@ -19,6 +21,13 @@ function App() {
   const handleProjectScroll = () => {
     if (anchorRefProject.current) {
       anchorRefProject.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+      console.log('Clicked');
+    }
+  };
+
+  const handleThreeDProjectScroll = () => {
+    if (anchorRefThreeDProject.current) {
+      anchorRefThreeDProject.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
       console.log('Clicked');
     }
   };
@@ -37,12 +46,14 @@ function App() {
 
   const handleScroll = () => {
     const aboutSection = document.getElementById('about');
+    const threeDProjectsSection = document.getElementById('threed');
     const projectsSection = document.getElementById('projects');
     const contactSection = document.getElementById('contact');
 
-    if (aboutSection && projectsSection && contactSection) {
+    if (aboutSection && projectsSection && threeDProjectsSection && contactSection) {
       const aboutTop = aboutSection.getBoundingClientRect().top;
       const projectsTop = projectsSection.getBoundingClientRect().top;
+      const threeDProjectsTop = threeDProjectsSection.getBoundingClientRect().top;
       const contactTop = contactSection.getBoundingClientRect().top;
 
       if (aboutTop <= 0 && projectsTop > 0) {
@@ -51,6 +62,8 @@ function App() {
         setActiveSection('projects');
       } else if (contactTop <= 0) {
         setActiveSection('contact');
+      } else if (threeDProjectsTop <= 0 && contactTop > 0) {
+        setActiveSection('threed');
       }
     }
   };
@@ -74,12 +87,15 @@ function App() {
 
   return (
     <ActiveSectionContext.Provider value={{ activeSection, setActiveSection }}>
-      <Navbar handleAboutScroll={handleAboutScroll} handleProjectScroll={handleProjectScroll} handleContactScroll={handleContactScroll} />
+      <Navbar handleAboutScroll={handleAboutScroll} handleThreeDProjectsScroll={handleThreeDProjectScroll} handleProjectScroll={handleProjectScroll} handleContactScroll={handleContactScroll} />
       <div id="about">
         <About2 anchorRef={anchorRefAbout} handleProjectScroll={handleProjectScroll} />
       </div>
       <div id="projects">
         <Projects2 anchorRef={anchorRefProject} onImageClick={handleImageClick} />
+      </div>
+      <div id="threed">
+        <ThreeDProjects anchorRef={anchorRefThreeDProject} />
       </div>
       <div id="contact">
         <Contact anchorRef={anchorRefContact} />
