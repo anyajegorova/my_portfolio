@@ -8,7 +8,7 @@
 .projects_title {
     font-size: 2.5rem;
     font-weight: 400;
-    color: var(--text-color);
+    color: var(--secondary-color);
     font-family: 'Montserrat', sans-serif;
     text-align: flex-start;
     margin-left: 2em;

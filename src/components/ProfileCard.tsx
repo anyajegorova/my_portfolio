@@ -13,18 +13,15 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ handleProjectScroll }) => {
         <div className='profile_card_container'>
 
             <div className='info_container'>
-                <Reveal><h2>WEB</h2></Reveal>
-                <Reveal><h2>DEVELOPER</h2></Reveal>
+                <Reveal><h2>Web Solutions That Help Your Business Grow </h2></Reveal>
                 <Reveal>              <p>
-                    I am <span>Anna Jegorova</span> - a web developer with a passion for creating beautiful and functional websites. I have experience with both front-end and back-end technologies, and I am always looking to learn new things.
+                Need a fast, modern website that actually converts visitors into customers?
+                I build custom websites and web applications that are not just beautiful — but strategic, user-friendly, and built to grow your business.
                 </p></Reveal>
                 <div className='button_container'>
                     <Reveal><CustomButton text='See Projects' onClick={handleProjectScroll} /></Reveal>
                 </div>
 
-            </div>
-            <div className='image_container'>
-                <Reveal> <img src={ProfileImage} alt='Anna Jegorova' /></Reveal>
             </div>
         </div>
     )

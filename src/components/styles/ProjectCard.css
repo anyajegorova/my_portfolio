@@ -16,7 +16,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     position: relative; 
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color-background);
 }
 
 @media (max-width: 1680px) {
@@ -62,13 +62,13 @@
 .project_title {
     margin: 0;
     font-size: 1.2em;
-    color: var(--text-color); 
+    color: var(--secondary-color); 
     font-family: 'Montserrat', sans-serif;
 }
 
 .project_description {
     margin: 0.5em 0;
-    color: var(--text-color); 
+    color: var(--secondary-color); 
     font-size: 0.6em;
     line-height: 1.2; 
     text-align: justify;
@@ -79,7 +79,7 @@
 .project_technologies {
     margin: 0.5em 0;
     margin-top: 1em;
-    color: var(--text-color); 
+    color: var(--secondary-color); 
     font-size: 0.6em;
     line-height: 1.2; 
     text-align: justify;

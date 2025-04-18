@@ -15,14 +15,14 @@
   margin-right: auto;
   font-size: 1.5rem;
   font-weight: 200;
-  color: var(--text-color);
+  color: var(--secondary-color);
   cursor: pointer;
   font-family: "Red Hat Display", serif;
   transition: text-shadow color 0.3s ease-in-out;
 }
 
 .navigation .logo:hover {
-  text-shadow: 0 0 10px var(--full-color-pink), 0 0 20px var(--full-color-pink), 0 0 30px var(--full-color-pink);
+  text-shadow: 0 0 10px var(--accent-color-hover), 0 0 20px var(--accent-color-hover), 0 0 30px var(--accent-color-hover);
 }
 
 .navigation h3 {
@@ -37,20 +37,20 @@
 }
 
 .navigation h3:hover {
-  color: var(--full-color-pink);
+  color: var(--accent-color-hover);
 }
 
 .navigation h3.active {
-  color: var(--full-color-pink);
+  color: var(--accent-color-hover);
 }
 
 .navigation h3:last-child {
   margin-left: 4rem;
-  background-color: var(--very-faded-color-pink);
-  color: var(--full-color-pink);
+  background-color: var(--accent-color-lilac);
+  color: var(--accent-color-hover);
   margin: 0.5rem 0.5rem;
   border-radius: 1em;
-  border: 1px solid var(--full-color-pink);
+  border: 1px solid var(--accent-color-hover);
   padding: 0.5em 1em;
   transition: box-shadow 0.3s ease-in-out;
 }

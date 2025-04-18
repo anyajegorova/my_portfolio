@@ -24,14 +24,14 @@
     font-size: 0.5em;
     opacity: 0.7;
     padding: 3em;
-    color: var(--text-color);
+    color: var(--secondary-color);
 }
 
 .contact_section p cite {
     display: block;
     font-size: 2em;
     margin-bottom: 1.2em;
-    color: var(--text-color);
+    color: var(--secondary-color);
     font-family: 'Montserrat';
 }
 
@@ -51,7 +51,7 @@ form h2 {
     font-size: 1.6em;
     font-weight: 400;
     font-family: 'Montserrat';
-    color: var(--text-color);
+    color: var(--secondary-color);
     align-self: flex-start;
 }
 
@@ -61,13 +61,13 @@ form input {
     width: 100%;
     border: 1px solid var(--divider-color);;
     border-radius: 0.25em;
-    color: var(--text-color);
+    color: var(--secondary-color);
     font-family: 'Montserrat';
     font-weight: 300;
     font-size: 1rem;
 
     box-sizing: border-box;
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color-background);
 }
 
 form textarea {
@@ -77,13 +77,13 @@ form textarea {
     border-radius: 0.25em;
     border: 1px solid var(--divider-color);;
     resize: none;
-    color: var(--text-color);
+    color: var(--secondary-color);
     font-family: 'Montserrat';
     font-weight: 300;
     font-size: 1rem;
 
     box-sizing: border-box;
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color-background);
 }
 
 form input::placeholder,
@@ -92,7 +92,7 @@ form textarea::placeholder {
     font-weight: 200;
     opacity: 0.5;
     font-size: 1.2em;
-    color: var(--text-color);
+    color: var(--secondary-color);
 }
 
 form label {
@@ -100,7 +100,7 @@ form label {
     font-weight: 300;
     align-self: flex-start;
     font-family: 'Montserrat';
-    color: var(--text-color);
+    color: var(--secondary-color);
     margin-left: 0.25em;
 }
 
@@ -115,11 +115,11 @@ form button {
     cursor: pointer;
 
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-    background-color: var(--very-faded-color-pink);
-    color: var(--full-color-pink);
+    background-color: var(--accent-color-lilac);
+    color: var(--accent-color-hover);
     margin: 2rem 0.5rem;
     border-radius: 1em;
-    border: 1px solid var(--full-color-pink);
+    border: 1px solid var(--accent-color-hover);
     padding: 0.5em 1em;
     transition: box-shadow 0.3s ease-in-out;
 }
