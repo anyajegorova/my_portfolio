@@ -1,6 +1,5 @@
 import React from 'react'
 import './styles/ProfileCard.css'
-import ProfileImage from '../assets/AnnaJegorova.png'
 import CustomButton from './CustomButton'
 import Reveal from '../reveal_components/Reveal'
 
@@ -19,7 +18,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ handleProjectScroll }) => {
                 I build custom websites and web applications that are not just beautiful — but strategic, user-friendly, and built to grow your business.
                 </p></Reveal>
                 <div className='button_container'>
-                    <Reveal><CustomButton text='See Projects' onClick={handleProjectScroll} /></Reveal>
+                    <Reveal><CustomButton text='View Work' onClick={handleProjectScroll} /></Reveal>
                 </div>
 
             </div>
