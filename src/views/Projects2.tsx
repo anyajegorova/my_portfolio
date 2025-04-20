@@ -26,6 +26,7 @@ const Projects: React.FC<ProjectsProps> = ({ anchorRef, onImageClick }) => {
                         description={project.description}
                         technologies={project.technologies}
                         gitHubLink={project.gitHubLink}
+                        liveLink={project.liveLink} // Pass the live link prop
                         onImageClick={onImageClick}
                     />
                 ))}

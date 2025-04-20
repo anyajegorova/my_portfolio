@@ -10,9 +10,9 @@ export const projects = [
     {
         name: 'Avustava Enkeli',
         image: AvustavaEnkeli,
-        description: 'A responsive web application for a Finnish company that provides home care services. Users can view services, prices, and contact the company.',
+        description: 'Avustava Enkeli is a web application offering professional cleaning and assistant services for households in Vantaa. The project aims to provide a user-friendly interface for customers to learn about the services offered, view pricing, and contact the company for bookings.',
         technologies: 'ReactJS, Vite, TypeScript, CSS',
-        gitHubLink: 'https://github.com/anyajegorova/avustava-enkeli.git'
+        liveLink: 'https://avustava-enkeli.onrender.com/' // Retain live link
     },
     {
         name: 'SayIt!',
