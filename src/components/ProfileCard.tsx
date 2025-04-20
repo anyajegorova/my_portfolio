@@ -12,13 +12,15 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ handleProjectScroll }) => {
         <div className='profile_card_container'>
 
             <div className='info_container'>
-                <Reveal><h2>Web Solutions That Help Your Business Grow </h2></Reveal>
-                <Reveal>              <p>
-                Need a fast, modern website that actually converts visitors into customers?
-                I build custom websites and web applications that are not just beautiful — but strategic, user-friendly, and built to grow your business.
-                </p></Reveal>
+                <Reveal delayOrder={0}><h2>Web Solutions That Help Your Business Grow </h2></Reveal>
+                <Reveal delayOrder={1}>
+                    <p>
+                        Need a fast, modern website that actually converts visitors into customers?
+                        I build custom websites and web applications that are not just beautiful — but strategic, user-friendly, and built to grow your business.
+                    </p>
+                </Reveal>
                 <div className='button_container'>
-                    <Reveal><CustomButton text='View Work' onClick={handleProjectScroll} /></Reveal>
+                    <Reveal delayOrder={2}><CustomButton text='View Work' onClick={handleProjectScroll} /></Reveal>
                 </div>
 
             </div>

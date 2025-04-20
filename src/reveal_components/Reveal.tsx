@@ -4,9 +4,10 @@ import { motion, useInView, useAnimation } from 'framer-motion'
 interface Props {
     children: React.ReactNode;
     width?: "fit-content" | "100%";
+    delayOrder?: number;
 }
 
-const Reveal = ({ children, width = "fit-content" }: Props) => {
+const Reveal = ({ children, width = "fit-content", delayOrder = 0 }: Props) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -29,7 +30,7 @@ const Reveal = ({ children, width = "fit-content" }: Props) => {
                     y: 0,
                     transition: {
                         duration: 0.5,
-                        delay: 0.25
+                        delay: 0.25 + delayOrder * 0.2
                     }
                 }
             }}
