@@ -7,6 +7,7 @@ import Contact from './views/Contact';
 import Footer from './components/Footer';
 import { ActiveSectionContext } from './context/ActiveSectionContext';
 import ImageModal from './components/ImageModal';
+import Statistics from './components/Statistics';
 
 function App() {
   const [activeSection, setActiveSection] = useState('');
@@ -77,6 +78,9 @@ function App() {
       <Navbar handleAboutScroll={handleAboutScroll} handleProjectScroll={handleProjectScroll} handleContactScroll={handleContactScroll} />
       <div id="about">
         <About2 anchorRef={anchorRefAbout} handleProjectScroll={handleProjectScroll} />
+      </div>
+      <div id="statistics">
+        <Statistics />
       </div>
       <div id="projects">
         <Projects2 anchorRef={anchorRefProject} onImageClick={handleImageClick} />

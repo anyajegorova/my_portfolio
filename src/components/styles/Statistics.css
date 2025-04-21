@@ -1,0 +1,93 @@
+.statistics_container{
+    display: flex;
+    gap: 6rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/client-agreement.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 2em 1em;
+    margin-bottom: 4em;
+    position: relative; 
+}
+
+.statistics_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(62, 56, 78, 0.5); 
+    z-index: 1;
+}
+
+.statistics_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2; 
+}
+.statistics_card h1{
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--primary-color-background);
+    margin: 0;
+    margin-bottom: 1rem; 
+    font-family: 'Source Sans 3', sans-serif;
+}
+.statistics_card h3{
+    font-size: 1.5rem;
+    color: var(--primary-color-background);
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+@media (max-width: 1060px) { /* Tablet and smaller screens */
+    .statistics_container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .statistics_card{
+        border-bottom: 2rem solid var(--primary-color-background);
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+
+    .statistics_card h1 {
+        font-size: 4rem;
+    }
+
+    .statistics_card h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile screens */
+    .statistics_container {
+        gap: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .statistics_card h1 {
+        font-size: 3rem;
+    }
+
+    .statistics_card h3 {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .statistics_card:nth-child(3) {
+        padding-bottom: 1rem;
+    }
+}
