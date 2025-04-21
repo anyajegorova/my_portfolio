@@ -102,3 +102,15 @@
     color: #fff;
   }
 }
+
+@media (max-width: 768px) {
+  .learn-more {
+    width: 8rem;
+  }
+
+  .learn-more .button-text {
+    padding: 0.5rem 0; 
+    font-size: 0.75rem; 
+    align-self: center;
+  }
+}
