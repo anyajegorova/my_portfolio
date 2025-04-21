@@ -19,16 +19,26 @@ body {
   margin: 0;
   font-size: 32px;
   background-color: var(--primary-color-background);
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+nav {
+  padding: 0; 
 }
 
 @media (max-width: 648px) {
   body {
     font-size: 24px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
 @media (max-width: 468px) {
   body {
     font-size: 18px;
+    padding-left: 2%;
+    padding-right: 2%;
   }
 }

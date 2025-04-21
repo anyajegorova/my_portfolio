@@ -1,7 +1,7 @@
 .project_card_container {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em; /* Increased gap between project cards */
     padding: 1em;
     justify-content: center;
 }
@@ -37,10 +37,12 @@
 
 .project_content {
     width: 60%; 
-    padding: 1.5em; 
+    padding-left: 1.5em; 
+    padding-right: 1.5em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
+    align-items: flex-start; 
 }
 
 .project_title {
@@ -67,7 +69,7 @@
 .project_description {
     margin: 1em 0;
     color: var(--secondary-color);
-    font-size: 0.8em;
+    font-size: 0.65em;
     line-height: 1.5; 
     text-align: justify;
     font-family: 'Montserrat', sans-serif;
@@ -88,4 +90,80 @@
 .project_link:hover {
     text-decoration: underline;
     color: var(--secondary-color);
+}
+
+@media (max-width: 1024px) {
+    .project_card {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .project_image {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .project_image img {
+        border-radius: 0;
+    }
+
+    .project_content {
+        width: 100%; 
+        padding-top: 1em; 
+        padding-bottom: 1em;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .project_title {
+        font-size: 1.4em; 
+    }
+
+    .project_technologies {
+        font-size: 0.75em; 
+    }
+
+    .project_description {
+        font-size: 0.85em; 
+    }
+
+    .project_link {
+        font-size: 0.75em; 
+    }
+}
+
+@media (max-width: 768px) {
+    .project_title {
+        font-size: 1.2em; 
+    }
+
+    .project_technologies {
+        font-size: 0.7em; 
+    }
+
+    .project_description {
+        font-size: 0.75em; 
+    }
+
+    .project_link {
+        font-size: 0.7em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .project_title {
+        font-size: 1em; 
+    }
+
+    .project_technologies {
+        font-size: 0.6em; 
+    }
+
+    .project_description {
+        font-size: 0.65em; 
+    }
+
+    .project_link {
+        font-size: 0.6em; 
+    }
 }
