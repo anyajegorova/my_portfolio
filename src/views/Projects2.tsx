@@ -15,7 +15,7 @@ const Projects: React.FC<ProjectsProps> = ({ anchorRef, onImageClick }) => {
     return (
         <section className='projects_section' ref={anchorRef}>
             <div>
-                <h1 className='projects_title'>Projects</h1>
+                <h1 className='projects_title'>Works</h1>
             </div>
             <div className='project_card_container'>
                 {projects.map((project, index) => (
