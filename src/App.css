@@ -6,7 +6,8 @@
 
 #about,
 #projects,
-#contact {
+#contact,
+#statistics {
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -14,7 +15,8 @@
 @media (max-width: 648px) {
   #about,
   #projects,
-  #contact {
+  #contact,
+  #statistics {
     padding-left: 5%;
     padding-right: 5%;
   }
@@ -23,7 +25,8 @@
 @media (max-width: 468px) {
   #about,
   #projects,
-  #contact {
+  #contact,
+  #statistics {
     padding-left: 2%;
     padding-right: 2%;
   }
