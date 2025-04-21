@@ -1,6 +1,5 @@
 import React from 'react'
 import './styles/ProfileCard.css'
-import ProfileImage from '../assets/AnnaJegorova.png'
 import CustomButton from './CustomButton'
 import Reveal from '../reveal_components/Reveal'
 
@@ -13,18 +12,17 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ handleProjectScroll }) => {
         <div className='profile_card_container'>
 
             <div className='info_container'>
-                <Reveal><h2>WEB</h2></Reveal>
-                <Reveal><h2>DEVELOPER</h2></Reveal>
-                <Reveal>              <p>
-                    I am <span>Anna Jegorova</span> - a web developer with a passion for creating beautiful and functional websites. I have experience with both front-end and back-end technologies, and I am always looking to learn new things.
-                </p></Reveal>
+                <Reveal delayOrder={0}><h2>Web Solutions That Help Your Business Grow </h2></Reveal>
+                <Reveal delayOrder={2}>
+                    <p>
+                        Need a fast, modern website that actually converts visitors into customers?
+                        I build custom websites and web applications that are not just beautiful — but strategic, user-friendly, and built to grow your business.
+                    </p>
+                </Reveal>
                 <div className='button_container'>
-                    <Reveal><CustomButton text='See Projects' onClick={handleProjectScroll} /></Reveal>
+                    <Reveal delayOrder={3}><CustomButton text='View Work' onClick={handleProjectScroll} /></Reveal>
                 </div>
 
-            </div>
-            <div className='image_container'>
-                <Reveal> <img src={ProfileImage} alt='Anna Jegorova' /></Reveal>
             </div>
         </div>
     )

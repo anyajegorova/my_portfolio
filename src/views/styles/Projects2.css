@@ -1,26 +1,40 @@
-.projects_section{
+.projects_section {
     min-height: calc(100vh - 2em);
     justify-content: center;
     display: flex;
     flex-direction: column;
     padding: 2em 0;
 }
+
+.project_card_container > .project_card {
+    margin-bottom: 2em;
+}
+
 .projects_title {
     font-size: 2.5rem;
     font-weight: 400;
-    color: var(--text-color);
+    color: var(--secondary-color);
     font-family: 'Montserrat', sans-serif;
     text-align: flex-start;
     margin-left: 2em;
     text-transform: uppercase;
 }
 
+@media (max-width: 1024px) {
+    .projects_title {
+        font-size: 2rem;
+        margin-left: 1em;
+    }
+}
+
 @media (max-width: 768px) {
     .projects_title {
-        font-size: 1.8rem; 
-        margin-left: 1.1em;
+        font-size: 1.5rem;
+        margin-left: 0.5em;
     }
     .projects_section {
         padding: 1em 0;
+        flex-direction: column;
+        align-items: center;
     }
 }

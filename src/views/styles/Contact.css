@@ -24,15 +24,17 @@
     font-size: 0.5em;
     opacity: 0.7;
     padding: 3em;
-    color: var(--text-color);
+    color: var(--secondary-color);
 }
 
 .contact_section p cite {
     display: block;
     font-size: 2em;
     margin-bottom: 1.2em;
-    color: var(--text-color);
+    color: var(--secondary-color);
     font-family: 'Montserrat';
+    font-weight: 400;
+    
 }
 
 form {
@@ -41,7 +43,7 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 2em;
+    padding: 1em;
     font-size: 1em;
     box-sizing: border-box;
     gap: 0.5em;
@@ -51,7 +53,7 @@ form h2 {
     font-size: 1.6em;
     font-weight: 400;
     font-family: 'Montserrat';
-    color: var(--text-color);
+    color: var(--secondary-color);
     align-self: flex-start;
 }
 
@@ -59,15 +61,15 @@ form input {
     height: 3.5em;
     padding: 1em;
     width: 100%;
-    border: 1px solid var(--divider-color);;
+    border: 1px solid var(--secondary-color-subtle);;
     border-radius: 0.25em;
-    color: var(--text-color);
+    color: var(--secondary-color);
     font-family: 'Montserrat';
     font-weight: 300;
     font-size: 1rem;
 
     box-sizing: border-box;
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color-background);
 }
 
 form textarea {
@@ -75,15 +77,15 @@ form textarea {
     height: 15em;
     padding: 1em;
     border-radius: 0.25em;
-    border: 1px solid var(--divider-color);;
+    border: 1px solid var(--secondary-color-subtle);;
     resize: none;
-    color: var(--text-color);
+    color: var(--secondary-color);
     font-family: 'Montserrat';
     font-weight: 300;
     font-size: 1rem;
 
     box-sizing: border-box;
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color-background);
 }
 
 form input::placeholder,
@@ -92,7 +94,7 @@ form textarea::placeholder {
     font-weight: 200;
     opacity: 0.5;
     font-size: 1.2em;
-    color: var(--text-color);
+    color: var(--secondary-color);
 }
 
 form label {
@@ -100,7 +102,7 @@ form label {
     font-weight: 300;
     align-self: flex-start;
     font-family: 'Montserrat';
-    color: var(--text-color);
+    color: var(--secondary-color);
     margin-left: 0.25em;
 }
 
@@ -109,28 +111,35 @@ form textarea:focus::placeholder {
     color: transparent;
 }
 
-form button {
-    width: 15em;
-    font-size: 0.6em;
-    cursor: pointer;
-
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-    background-color: var(--very-faded-color-pink);
-    color: var(--full-color-pink);
-    margin: 2rem 0.5rem;
-    border-radius: 1em;
-    border: 1px solid var(--full-color-pink);
-    padding: 0.5em 1em;
-    transition: box-shadow 0.3s ease-in-out;
+form input:focus,
+form textarea:focus {
+    border: 1px solid var(--accent-color-lilac);
+    outline: none;
+    box-shadow: 0 0 0.5em var(--accent-color-lilac);
+    transition: all 0.3s ease-in-out;
+    background-color: var(--primary-color-background);
+    color: var(--secondary-color);
+    font-family: 'Montserrat';
+    font-weight: 300;
 }
 
-form button:hover,
-form button:active {
-    transition: all 0.3s;
-    box-shadow: 0 0 0.5rem 0.1rem var(--faded-color-pink);
+form button {
+    background-color: var(--accent-color-lilac);
+    color: var(--secondary-color);
+    border-radius: 1em;
+    border: none;
+    padding: 0.5em 1em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    cursor: pointer;
+    margin: 0.5rem 0.5rem;
 }
 
 @media screen and (max-width: 1200px) {
+    form {
+        width: 100%;
+    }
     .contact_section {
         flex-direction: column-reverse;
         padding: 0;
@@ -158,13 +167,8 @@ form button:active {
 }
 
 @media screen and (max-width: 480px) {
-    .contact_section {
-        padding: 1em;
-    }
-
     form {
         width: 100%;
-        padding: 0 1em;
     }
 
     form h2 {

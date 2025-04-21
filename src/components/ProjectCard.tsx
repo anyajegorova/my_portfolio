@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles/ProjectCard.css'
-import CustomButton from './CustomButton'
+import CustomButtonPlain from './CustomButtonPlain'
 import Reveal from '../reveal_components/Reveal'
 
 interface ProjectCardProps {
@@ -9,10 +9,11 @@ interface ProjectCardProps {
   description: string;
   technologies: string;
   gitHubLink?: string;
+  liveLink?: string; // New optional prop for live link
   onImageClick: (image: string) => void;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, technologies, gitHubLink, onImageClick }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, technologies, gitHubLink, liveLink, onImageClick }) => {
   const handleImageClick = () => {
     onImageClick(image);
   };
@@ -23,17 +24,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, tec
         <img src={image} alt={name} />
       </div>
       <div className='project_content'>
-        <Reveal> <h3 className='project_title'>{name}</h3></Reveal>
-        <Reveal> <p className='project_description'>{description}</p></Reveal>
-        <Reveal> <p className='project_technologies'>({technologies})</p></Reveal>
+        <Reveal delayOrder={1}><h3 className='project_title'>{name}</h3></Reveal>
+        <Reveal delayOrder={2}><p className='project_technologies'>{technologies}</p></Reveal>
+        <Reveal delayOrder={3}><p className='project_description'>{description}</p></Reveal>
+        {liveLink && (
+          <Reveal delayOrder={4}>
+            <a href={liveLink} className='project_link' target='_blank' rel='noopener noreferrer'>
+              <CustomButtonPlain text="View Live" />
+            </a>
+          </Reveal>
+        )}
         {gitHubLink && (
-          <a href={gitHubLink} className='project_link' target='_blank' rel='noopener noreferrer'>
-            <CustomButton text="View on GitHub" />
-          </a>
+          <Reveal delayOrder={4}>
+            <a href={gitHubLink} className='project_link' target='_blank' rel='noopener noreferrer'>
+              <CustomButtonPlain text="View on GitHub" />
+            </a>
+          </Reveal>
         )}
       </div>
     </div>
-
   )
 }
 

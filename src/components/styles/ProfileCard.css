@@ -6,6 +6,7 @@
   justify-content: center;
   padding: 1em;
   gap: 4em;
+  user-select: none;
 }
 
 .image_container img {
@@ -22,6 +23,7 @@
   align-items: flex-start;
   justify-content: center;
   gap: 0.5em;
+  user-select: none;
 }
 
 .info_container h1 {
@@ -59,8 +61,8 @@
   }
 
   .image_container img {
-    width: 11em; /* increased from 9em */
-    height: 13em; /* increased from 11em */
+    width: 11em;
+    height: 13em;
   }
 
   .info_container h2 {
@@ -81,8 +83,8 @@
   }
 
   .image_container img {
-    width: 10em; /* increased from 8em */
-    height: 12em; /* increased from 10em */
+    width: 10em; 
+    height: 12em; 
   }
 
   .info_container h2 {
@@ -97,13 +99,13 @@
 
 @media (max-width: 480px) {
   .profile_card_container {
-    padding: 0.5em;
+    padding: 1em;
     gap: 1em;
   }
 
   .image_container img {
-    width: 8em; /* increased from 6em */
-    height: 10em; /* increased from 8em */
+    width: 8em;
+    height: 10em;
   }
 
   .info_container h2 {

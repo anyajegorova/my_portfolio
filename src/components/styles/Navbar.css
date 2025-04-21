@@ -5,24 +5,22 @@
   user-select: none;
   padding: 10px 20px;
   position: fixed;
-  width: 100%;
+  width: 100vw; 
   background-color: var(--background-color);
   backdrop-filter: blur(10px);
   z-index: 100;
+  left: 0; 
+  box-sizing: border-box; 
 }
 
 .navigation .logo {
   margin-right: auto;
   font-size: 1.5rem;
   font-weight: 200;
-  color: var(--text-color);
+  color: var(--secondary-color);
   cursor: pointer;
   font-family: "Red Hat Display", serif;
   transition: text-shadow color 0.3s ease-in-out;
-}
-
-.navigation .logo:hover {
-  text-shadow: 0 0 10px var(--full-color-pink), 0 0 20px var(--full-color-pink), 0 0 30px var(--full-color-pink);
 }
 
 .navigation h3 {
@@ -31,32 +29,25 @@
   padding: 1rem 1.5rem;
   font-weight: 300;
   cursor: pointer;
-  color: var(--faded-color-pink);
   font-family: "Montserrat", sans-serif;
   transition: color 0.3s ease-in-out;
 }
 
 .navigation h3:hover {
-  color: var(--full-color-pink);
+  color: var(--accent-color-hover);
 }
 
 .navigation h3.active {
-  color: var(--full-color-pink);
+  color: var(--accent-color-hover);
 }
 
 .navigation h3:last-child {
   margin-left: 4rem;
-  background-color: var(--very-faded-color-pink);
-  color: var(--full-color-pink);
+  background-color: var(--accent-color-lilac);
+  color: var(--secondary-color);
   margin: 0.5rem 0.5rem;
   border-radius: 1em;
-  border: 1px solid var(--full-color-pink);
   padding: 0.5em 1em;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.navigation h3:last-child:hover {
-  box-shadow: 0 0 0.5rem 0.1rem var(--faded-color-pink);
 }
 
 .nav-item {

@@ -3,7 +3,7 @@
   align-items: center;
   padding: 0.2em 0.5em;
   border-radius: 1em;
-  background-color: var(--very-faded-color-pink);
+  background-color: var(--accent-color-lilac);
   border: 1px solid var(--faded-color-pink);
   box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
   margin: 0.25em;
@@ -18,7 +18,7 @@
 
 .technology_chip span {
   font-size: 0.5em;
-  color: var(--text-color);
+  color: var(--secondary-color);
 }
 
 .technology_chip_text {

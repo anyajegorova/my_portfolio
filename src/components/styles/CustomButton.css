@@ -1,67 +1,104 @@
-/* .custom_button {
-  background-color: var(--faded-color-turquoise);
-  padding: 0.5em 1em;
-  border: 1px solid var(--full-color-turquoise);
-  border-radius: 1em;
-  color: var(--full-color-turquoise);
-  font-size: 0.5em;
-  font: "Montserrat", sans-serif;
-  cursor: pointer;
-}
-
-.custom_button:hover {
-  box-shadow: 0 0 0.5em var(--faded-color-turquoise);
-} */
-
-
-.custom_button {
-  width: 160px;
-  height: 40px;
+.learn-more {
+  width: 12rem;
+  height: auto;
+  position: relative;
+  display: inline-block;
   cursor: pointer;
   background: transparent;
-  border: 1px solid var(--full-color-turquoise);
+  border: none;
   outline: none;
-  position: relative;
-  transition: 1s ease-in-out;
+  padding: 0;
 }
 
-.custom_button svg {
+.learn-more .circle {
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: var(--secondary-color);
+  border-radius: 1.625rem;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.learn-more .circle .icon.arrow {
   position: absolute;
-  left: 0;
   top: 0;
-  fill: none;
-  stroke: var(--full-color-turquoise);
-  stroke-dasharray: 150 480;
-  stroke-dashoffset: 150;
-  transition: 1s ease-in-out;
+  bottom: 0;
+  margin: auto;
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
-.custom_button:hover {
-  background: var(--faded-color-turquoise);
-  box-shadow: 0 0 0.5em var(--faded-color-turquoise);
+.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: '';
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
 }
 
-.custom_button:hover svg {
-  stroke-dashoffset: -480;
+.learn-more .button-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
-.custom_button span {
-  color: var(--full-color-turquoise);
-  font-size: 18px;
-  font-weight: 100;
-  position: relative;
-  z-index: 1;
+.learn-more:hover .circle {
+  width: 100%;
 }
 
-@media (max-width: 768px) {
-  .custom_button {
-    width: 120px; 
-    height: 30px; 
+.learn-more:hover .circle .icon.arrow {
+  transform: translate(1rem, 0);
+  background: #fff;
+}
+
+.learn-more:hover .button-text {
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .learn-more {
+    width: 10rem;
   }
-  .custom_button span {
-    font-size: 14px; 
+
+  .learn-more .circle {
+    width: 2.5rem;
+    height: 2.5rem;
   }
-  .custom_button svg {
+
+  .learn-more .circle .icon.arrow {
     display: none;
+  }
+
+  .learn-more .button-text {
+    margin: 0;
+    padding: 0.6rem 0;
+    text-align: center;
+  }
+
+  .learn-more .circle {
+    width: 100%;
+  }
+
+  .learn-more .button-text {
+    color: #fff;
   }
 }

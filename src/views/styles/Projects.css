@@ -45,7 +45,7 @@
     font-size: 0.8em;
     font-weight: 200;
     margin: 0 1em;
-    color: var(--primary-font-color);
+    color: var(--secondary-color);
     cursor: pointer;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.3s;
@@ -60,7 +60,7 @@
 
 .navigation_wrapper h2.active,
 .navigation_wrapper h2:hover {
-    border-bottom: 1px solid var(--primary-font-color);
+    border-bottom: 1px solid var(--secondary-color);
 }
 
 .mockup_wrapper{

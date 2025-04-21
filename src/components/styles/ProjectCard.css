@@ -1,45 +1,26 @@
 .project_card_container {
     display: flex;
-    flex-wrap: wrap; 
-    gap: 1em;
+    flex-direction: column;
+    gap: 2em;
     padding: 1em;
     justify-content: center;
 }
 
 .project_card {
-    flex: 1 1 calc(33.33% - 2em);
-    max-width: calc(33.33% - 2em); 
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
     height: auto;
-    border: 1px solid var(--divider-color);
-    border-radius: 0.5em;
+    border: none; 
+    border-radius: 0; 
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    position: relative; 
-    background-color: var(--primary-color-dark);
-}
-
-@media (max-width: 1680px) {
-    .project_card {
-        flex: 1 1 calc(50% - 2em);
-        max-width: calc(50% - 2em);
-    }
-}
-
-@media (max-width: 992px) {
-    .project_card {
-        flex: 1 1 calc(100% - 2em);
-        max-width: calc(100% - 2em);
-    }
-}
-
-.project_card:hover {
-    transform: scale(1.01);
+    background-color: var(--primary-color-background);
+    align-items: flex-start; 
 }
 
 .project_image {
-    width: 100%;
-    height: 12em;
+    width: 40%; 
+    height: 15em;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -50,53 +31,138 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
-    border-bottom: 1px solid var(--divider-color);
+    object-position: center; 
+    border-radius: 0.5em; 
 }
 
 .project_content {
-    padding: 1em;
-    padding-bottom: 3em;
+    width: 60%; 
+    padding-left: 1.5em; 
+    padding-right: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start; 
 }
 
 .project_title {
-    margin: 0;
-    font-size: 1.2em;
-    color: var(--text-color); 
+    color: var(--text-color);
+    font-size: 1.8em; 
+    font-weight: 600;
     font-family: 'Montserrat', sans-serif;
+    margin: 0 0 0.5em 0; 
+}
+
+.project_technologies {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    background-color: var(--secondary-color);
+    color: var(--primary-color-background);
+    font-size: 0.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    border-radius: 0.3em;
+    display: inline-block; 
 }
 
 .project_description {
-    margin: 0.5em 0;
-    color: var(--text-color); 
-    font-size: 0.6em;
-    line-height: 1.2; 
+    margin: 1em 0;
+    color: var(--secondary-color);
+    font-size: 0.65em;
+    line-height: 1.5; 
     text-align: justify;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
 
-.project_technologies {
-    margin: 0.5em 0;
-    margin-top: 1em;
-    color: var(--text-color); 
-    font-size: 0.6em;
-    line-height: 1.2; 
-    text-align: justify;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-}
-
 .project_link {
     text-decoration: none;
-    font-size: 0.9em; 
-    margin-top: 0.5em; 
-    display: inline-block; 
-    position: absolute; 
-    bottom: 1em; 
-    left: 1em; 
+    font-size: 0.9em;
+    margin-top: 1em;
+    display: inline-block;
+    align-self: flex-start;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
 .project_link:hover {
     text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 1024px) {
+    .project_card {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .project_image {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .project_image img {
+        border-radius: 0;
+    }
+
+    .project_content {
+        width: 100%; 
+        padding-top: 1em; 
+        padding-bottom: 1em;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .project_title {
+        font-size: 1.4em; 
+    }
+
+    .project_technologies {
+        font-size: 0.75em; 
+    }
+
+    .project_description {
+        font-size: 0.85em; 
+    }
+
+    .project_link {
+        font-size: 0.75em; 
+    }
+}
+
+@media (max-width: 768px) {
+    .project_title {
+        font-size: 1.2em; 
+    }
+
+    .project_technologies {
+        font-size: 0.7em; 
+    }
+
+    .project_description {
+        font-size: 0.75em; 
+    }
+
+    .project_link {
+        font-size: 0.7em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .project_title {
+        font-size: 1em; 
+    }
+
+    .project_technologies {
+        font-size: 0.6em; 
+    }
+
+    .project_description {
+        font-size: 0.65em; 
+    }
+
+    .project_link {
+        font-size: 0.6em; 
+    }
 }
