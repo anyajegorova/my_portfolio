@@ -9,7 +9,7 @@
 
 .copyright_wrapper h3 {
     margin: 0;
-    padding: 1.2em;
+    padding: 1em;
     font-size: 0.6em;
     font-weight: 300;
     color: var(--secondary-color);
@@ -18,11 +18,11 @@
 
 .social_media_wrapper {
     display: flex;
-    gap: 1em;
-    padding: 0 1em;
+    gap: 0.8em;
+    padding: 0 0.8em;
 }
 
 .social_media_wrapper a svg {
-    width: 1em;
+    width: 0.8em;
     cursor: pointer;
 }

@@ -21,10 +21,6 @@
 }
 
 @media (max-width: 1024px) {
-    .projects_section {
-        padding: 1em;
-    }
-
     .projects_title {
         font-size: 2rem;
         margin-left: 1em;

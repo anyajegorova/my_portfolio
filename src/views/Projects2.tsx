@@ -13,7 +13,7 @@ const Projects: React.FC<ProjectsProps> = ({ anchorRef, onImageClick }) => {
     const imageRef = useRef(null);
 
     return (
-        <section id="projects" className='projects_section' ref={anchorRef}>
+        <section className='projects_section' ref={anchorRef}>
             <div>
                 <h1 className='projects_title'>Projects</h1>
             </div>
@@ -25,8 +25,7 @@ const Projects: React.FC<ProjectsProps> = ({ anchorRef, onImageClick }) => {
                         image={project.image}
                         description={project.description}
                         technologies={project.technologies}
-                        gitHubLink={project.gitHubLink}
-                        liveLink={project.liveLink} // Pass the live link prop
+                        liveLink={project.liveLink} 
                         onImageClick={onImageClick}
                     />
                 ))}

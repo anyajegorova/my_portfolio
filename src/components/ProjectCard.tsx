@@ -24,18 +24,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, tec
         <img src={image} alt={name} />
       </div>
       <div className='project_content'>
-        <Reveal><h3 className='project_title'>{name}</h3></Reveal>
-        <Reveal><p className='project_technologies'>{technologies}</p></Reveal>
-        <Reveal><p className='project_description'>{description}</p></Reveal>
+        <Reveal delayOrder={1}><h3 className='project_title'>{name}</h3></Reveal>
+        <Reveal delayOrder={2}><p className='project_technologies'>{technologies}</p></Reveal>
+        <Reveal delayOrder={3}><p className='project_description'>{description}</p></Reveal>
         {liveLink && (
-          <Reveal>
+          <Reveal delayOrder={4}>
             <a href={liveLink} className='project_link' target='_blank' rel='noopener noreferrer'>
               <CustomButtonPlain text="View Live" />
             </a>
           </Reveal>
         )}
         {gitHubLink && (
-          <Reveal>
+          <Reveal delayOrder={4}>
             <a href={gitHubLink} className='project_link' target='_blank' rel='noopener noreferrer'>
               <CustomButtonPlain text="View on GitHub" />
             </a>

@@ -3,3 +3,28 @@
   padding: 0;
   margin: 0;
 }
+
+#about,
+#projects,
+#contact {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media (max-width: 648px) {
+  #about,
+  #projects,
+  #contact {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 468px) {
+  #about,
+  #projects,
+  #contact {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}

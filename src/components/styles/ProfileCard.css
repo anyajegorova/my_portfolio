@@ -99,7 +99,7 @@
 
 @media (max-width: 480px) {
   .profile_card_container {
-    padding: 0.5em;
+    padding: 1em;
     gap: 1em;
   }
 
