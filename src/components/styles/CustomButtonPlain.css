@@ -1,0 +1,16 @@
+.custom-button-plain {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+.custom-button-plain .button-text {
+    color: var(--secondary-color);
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles/ProjectCard.css'
-import CustomButton from './CustomButton'
+import CustomButtonPlain from './CustomButtonPlain'
 import Reveal from '../reveal_components/Reveal'
 
 interface ProjectCardProps {
@@ -30,14 +30,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, tec
         {liveLink && (
           <Reveal>
             <a href={liveLink} className='project_link' target='_blank' rel='noopener noreferrer'>
-              <CustomButton text="View Live" />
+              <CustomButtonPlain text="View Live" />
             </a>
           </Reveal>
         )}
         {gitHubLink && (
           <Reveal>
             <a href={gitHubLink} className='project_link' target='_blank' rel='noopener noreferrer'>
-              <CustomButton text="View on GitHub" />
+              <CustomButtonPlain text="View on GitHub" />
             </a>
           </Reveal>
         )}
