@@ -33,6 +33,9 @@
     margin-bottom: 1.2em;
     color: var(--secondary-color);
     font-family: 'Montserrat';
+    font-weight: 400;
+    text-align: center;
+    
 }
 
 form {
@@ -59,7 +62,7 @@ form input {
     height: 3.5em;
     padding: 1em;
     width: 100%;
-    border: 1px solid var(--divider-color);;
+    border: 1px solid var(--secondary-color-subtle);;
     border-radius: 0.25em;
     color: var(--secondary-color);
     font-family: 'Montserrat';
@@ -75,7 +78,7 @@ form textarea {
     height: 15em;
     padding: 1em;
     border-radius: 0.25em;
-    border: 1px solid var(--divider-color);;
+    border: 1px solid var(--secondary-color-subtle);;
     resize: none;
     color: var(--secondary-color);
     font-family: 'Montserrat';
@@ -109,25 +112,29 @@ form textarea:focus::placeholder {
     color: transparent;
 }
 
-form button {
-    width: 15em;
-    font-size: 0.6em;
-    cursor: pointer;
-
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-    background-color: var(--accent-color-lilac);
-    color: var(--accent-color-hover);
-    margin: 2rem 0.5rem;
-    border-radius: 1em;
-    border: 1px solid var(--accent-color-hover);
-    padding: 0.5em 1em;
-    transition: box-shadow 0.3s ease-in-out;
+form input:focus,
+form textarea:focus {
+    border: 1px solid var(--accent-color-lilac);
+    outline: none;
+    box-shadow: 0 0 0.5em var(--accent-color-lilac);
+    transition: all 0.3s ease-in-out;
+    background-color: var(--primary-color-background);
+    color: var(--secondary-color);
+    font-family: 'Montserrat';
+    font-weight: 300;
 }
 
-form button:hover,
-form button:active {
-    transition: all 0.3s;
-    box-shadow: 0 0 0.5rem 0.1rem var(--faded-color-pink);
+form button {
+    background-color: var(--accent-color-lilac);
+    color: var(--secondary-color);
+    border-radius: 1em;
+    border: none;
+    padding: 0.5em 1em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    cursor: pointer;
+    margin: 0.5rem 0.5rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -158,13 +165,8 @@ form button:active {
 }
 
 @media screen and (max-width: 480px) {
-    .contact_section {
-        padding: 1em;
-    }
-
     form {
         width: 100%;
-        padding: 0 1em;
     }
 
     form h2 {

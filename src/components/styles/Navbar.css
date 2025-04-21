@@ -5,12 +5,12 @@
   user-select: none;
   padding: 10px 20px;
   position: fixed;
-  width: 100vw; /* Make the navbar span the full viewport width */
+  width: 100vw; 
   background-color: var(--background-color);
   backdrop-filter: blur(10px);
   z-index: 100;
-  left: 0; /* Ensure the navbar starts at the very left */
-  box-sizing: border-box; /* Ensure padding and borders are included in the width */
+  left: 0; 
+  box-sizing: border-box; 
 }
 
 .navigation .logo {
@@ -48,7 +48,6 @@
   margin: 0.5rem 0.5rem;
   border-radius: 1em;
   padding: 0.5em 1em;
-  transition: box-shadow 0.3s ease-in-out;
 }
 
 .nav-item {

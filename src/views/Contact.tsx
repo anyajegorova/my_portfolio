@@ -32,7 +32,7 @@ const Contact: React.FC<ContactProps> = ({ anchorRef }) => {
     }
     return (
         <section className='contact_section' ref={anchorRef}>
-            <Reveal>
+            <Reveal width='100%'>
                 <form className='contact_form' ref={form} onSubmit={handleClick}>
                     <h2>Let's Get in Touch.</h2>
                     <label htmlFor="user_name">Name</label>
@@ -44,12 +44,12 @@ const Contact: React.FC<ContactProps> = ({ anchorRef }) => {
                     <button type='submit'>Send</button>
                 </form>
             </Reveal>
-            <Reveal>
+            <Reveal width='100%'>
                 <div className='cite_container'>
-                    <svg fill="#ffffff"
+                    <svg fill="#000000"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
-                        stroke="#ffffff">
+                        stroke="#000000">
                         <g id="SVGRepo_bgCarrier"
                             strokeWidth="0"></g>
                         <g id="SVGRepo_tracerCarrier"
