@@ -76,6 +76,7 @@
     .statistics_container {
         gap: 1.5rem;
         padding-top: 1rem;
+        background-attachment: scroll;
     }
 
     .statistics_card h1 {
