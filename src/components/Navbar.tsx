@@ -30,7 +30,9 @@ const Navbar = ({ isVisible, handleAboutScroll, handleProjectScroll, handleConta
                     {t('navbar.contact')}
                 </h3>
             </div>
-            <h3><LanguageSwitcher /></h3>
+            <h3 className="language-switcher">
+                <LanguageSwitcher />
+            </h3>
             <div className="mobile-menu">
                 <button className="hamburger" onClick={toggleMobileMenu}>
                     ☰
