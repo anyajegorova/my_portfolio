@@ -1,0 +1,77 @@
+.approach_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+  padding: 4em 1em;
+  flex-wrap: wrap;
+}
+
+.step_container {
+  flex: 1;
+  min-width: 12.5rem;
+  max-width: 16rem;
+  text-align: flex-start;
+  position: relative;
+  padding: 2rem 1rem;
+}
+
+.step_icon {
+  font-size: 3.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+.step_container .step_number {
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--secondary-color);
+  opacity: 0.08;
+  top: 0;
+  position: absolute;
+  left: 60%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.step_container h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  position: relative;
+  z-index: 2;
+}
+
+.step_container p {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  position: relative;
+  z-index: 2;
+  line-height: 1.5;
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .approach_container {
+    align-items: center;
+    justify-content: center;
+    padding: 2em 1em;
+  }
+  .step_container .step_number {
+    font-size: 5rem;
+  }
+  .step_container h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .step_container p {
+    font-size: 0.8rem;
+  }
+  .projects_title{
+    text-align: center;
+  }
+}

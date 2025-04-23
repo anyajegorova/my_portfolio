@@ -4,7 +4,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-image: url('../../assets/client-agreement.jpg');
+    background-image: url('../../assets/client-agreement.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -76,6 +76,7 @@
     .statistics_container {
         gap: 1.5rem;
         padding-top: 1rem;
+        background-attachment: scroll;
     }
 
     .statistics_card h1 {

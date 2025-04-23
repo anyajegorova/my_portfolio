@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import { ActiveSectionContext } from './context/ActiveSectionContext';
 import ImageModal from './components/ImageModal';
 import Statistics from './components/Statistics';
+import Approach from './components/Approach';
 
 function App() {
   const [activeSection, setActiveSection] = useState('');
@@ -81,6 +82,9 @@ function App() {
       </div>
       <div id="statistics">
         <Statistics />
+      </div>
+      <div id="approach">
+        <Approach />
       </div>
       <div id="projects">
         <Projects2 anchorRef={anchorRefProject} onImageClick={handleImageClick} />

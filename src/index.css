@@ -4,6 +4,28 @@
   box-sizing: border-box;
 }
 
+@font-face{
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: 'Red Hat Display';
+  src: url('/fonts/RedHatDisplay-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: 'Source Sans 3';
+  src: url('/fonts/SourceSans3-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --primary-color-background: #F9F9F6;
   --secondary-color: #1C1C1E;
@@ -21,6 +43,7 @@ body {
   background-color: var(--primary-color-background);
   display: flex;
   flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
 }
 
 nav {
