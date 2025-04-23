@@ -35,7 +35,6 @@
   color: var(--text-color);
   font-size: 2.6em;
   font-weight: 400;
-  font-family: 'Montserrat';
   margin: 0;
 }
 
@@ -44,7 +43,6 @@
     line-height: 1.5em;
     color: var(--text-color);
     font-weight: 200;
-    font-family: 'Montserrat';
     max-width: 24em;
 }
 

@@ -40,7 +40,6 @@
 .step_container h3 {
   font-size: 1.45rem;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
   margin-bottom: 0.5rem;
   color: var(--primary-color);
   position: relative;
@@ -49,7 +48,6 @@
 
 .step_container p {
   font-size: 1rem;
-  font-family: "Montserrat", sans-serif;
   color: var(--secondary-color);
   position: relative;
   z-index: 2;
