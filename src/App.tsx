@@ -1,14 +1,22 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, {
+  useRef,
+  useEffect,
+  useState,
+  lazy,
+  Suspense
+} from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import About2 from './views/About2';
-import Projects2 from './views/Projects2';
-import Contact from './views/Contact';
 import Footer from './components/Footer';
-import { ActiveSectionContext } from './context/ActiveSectionContext';
-import ImageModal from './components/ImageModal';
 import Statistics from './components/Statistics';
 import Approach from './components/Approach';
+import { ActiveSectionContext } from './context/ActiveSectionContext';
+
+// Lazy-loaded components
+const Projects2 = lazy(() => import('./views/Projects2'));
+const Contact = lazy(() => import('./views/Contact'));
+const ImageModal = lazy(() => import('./components/ImageModal'));
 
 function App() {
   const [activeSection, setActiveSection] = useState('');
@@ -21,19 +29,16 @@ function App() {
   const handleProjectScroll = () => {
     if (anchorRefProject.current) {
       anchorRefProject.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-      console.log('Clicked');
     }
   };
   const handleContactScroll = () => {
     if (anchorRefContact.current) {
       anchorRefContact.current.scrollIntoView({ behavior: 'smooth' });
-      console.log('Clicked');
     }
   };
   const handleAboutScroll = () => {
     if (anchorRefAbout.current) {
       anchorRefAbout.current.scrollIntoView({ behavior: 'smooth' });
-      console.log('Clicked');
     }
   };
 
@@ -86,14 +91,22 @@ function App() {
       <div id="approach">
         <Approach />
       </div>
-      <div id="projects">
-        <Projects2 anchorRef={anchorRefProject} onImageClick={handleImageClick} />
-      </div>
-      <div id="contact">
-        <Contact anchorRef={anchorRefContact} />
-      </div>
+      <Suspense fallback={<div>Loading projects…</div>}>
+        <div id="projects">
+          <Projects2 anchorRef={anchorRefProject} onImageClick={handleImageClick} />
+        </div>
+      </Suspense>
+      <Suspense fallback={<div>Loading contact…</div>}>
+        <div id="contact">
+          <Contact anchorRef={anchorRefContact} />
+        </div>
+      </Suspense>
       <Footer />
-      {isModalOpen && <ImageModal image={modalImage} onClose={handleCloseModal} />}
+      {isModalOpen && (
+        <Suspense fallback={<div>Loading image…</div>}>
+          <ImageModal image={modalImage} onClose={handleCloseModal} />
+        </Suspense>
+      )}
     </ActiveSectionContext.Provider>
   );
 }
