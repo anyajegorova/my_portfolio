@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className='footer'>
             <div className='copyright_wrapper'>
                 <h3>
-                    All Rights Reserved &copy; 2025 &nbsp;&nbsp;&nbsp;Anna Jegorova&nbsp;&nbsp;&nbsp;Business ID: 3526300-3
+                    All Rights Reserved &copy; 2025 &nbsp;&nbsp;&nbsp;Anna Jegorova<br />&nbsp;&nbsp;&nbsp;Business ID: 3526300-3
                 </h3>
             </div>
             <div className='social_media_wrapper'>

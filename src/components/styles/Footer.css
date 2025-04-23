@@ -26,3 +26,49 @@
     width: 0.8em;
     cursor: pointer;
 }
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    .footer {
+        align-items: flex-start;
+    }
+
+    .copyright_wrapper h3 {
+        font-size: 0.75em;
+        padding: 0.8em;
+    }
+
+    .social_media_wrapper {
+        padding: 0.5em;
+    }
+
+    .social_media_wrapper a svg {
+        width: 1em;
+    }
+}
+
+/* Media query for mobile */
+@media (max-width: 480px) {
+    .footer {
+        align-items: center;
+        text-align: center;
+    }
+
+    .copyright_wrapper h3 {
+        font-size: 0.75em;
+        padding: 0.5em;
+        line-height: 1.5;
+    }
+
+    .copyright_wrapper h3 br {
+        display: inline;
+    }
+
+    .social_media_wrapper {
+        gap: 0.5em;
+    }
+
+    .social_media_wrapper a svg {
+        width: 0.9em;
+    }
+}

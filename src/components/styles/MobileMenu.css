@@ -1,0 +1,31 @@
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--accent-color-hover);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.mobile-menu-content h3 {
+  color: var(--primary-color-background);
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--primary-color-background);
+  cursor: pointer;
+}
