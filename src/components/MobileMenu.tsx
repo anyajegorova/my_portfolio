@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './styles/MobileMenu.css';
 import { useTranslation } from 'react-i18next';
+import { ActiveSectionContext } from '../context/ActiveSectionContext';
 
 const MobileMenu = ({ handleAboutScroll, handleProjectScroll, handleContactScroll, closeMenu }) => {
     const { t } = useTranslation();
+    const { activeSection } = useContext(ActiveSectionContext);
 
     const handleClick = (scrollFunction) => {
         scrollFunction();
@@ -13,9 +15,24 @@ const MobileMenu = ({ handleAboutScroll, handleProjectScroll, handleContactScrol
     return (
         <div className="mobile-menu-overlay">
             <div className="mobile-menu-content">
-                <h3 onClick={() => handleClick(handleAboutScroll)}>{t('navbar.about')}</h3>
-                <h3 onClick={() => handleClick(handleProjectScroll)}>{t('navbar.projects')}</h3>
-                <h3 onClick={() => handleClick(handleContactScroll)}>{t('navbar.contact')}</h3>
+                <h3
+                    className={activeSection === 'about' ? 'active' : ''}
+                    onClick={() => handleClick(handleAboutScroll)}
+                >
+                    {t('navbar.about')}
+                </h3>
+                <h3
+                    className={activeSection === 'projects' ? 'active' : ''}
+                    onClick={() => handleClick(handleProjectScroll)}
+                >
+                    {t('navbar.projects')}
+                </h3>
+                <h3
+                    className={activeSection === 'contact' ? 'active' : ''}
+                    onClick={() => handleClick(handleContactScroll)}
+                >
+                    {t('navbar.contact')}
+                </h3>
                 <button className="close-button" onClick={closeMenu}>✕</button>
             </div>
         </div>

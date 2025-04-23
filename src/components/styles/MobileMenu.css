@@ -19,6 +19,11 @@
   cursor: pointer;
 }
 
+.mobile-menu-content h3.active {
+  font-weight: 700;
+  color: var(--primary-color-background);
+}
+
 .close-button {
   position: absolute;
   top: 1rem;
@@ -28,4 +33,6 @@
   border: none;
   color: var(--primary-color-background);
   cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
