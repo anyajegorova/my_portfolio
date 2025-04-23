@@ -2,12 +2,15 @@ import React from 'react'
 import './styles/Statistics.css'
 import Reveal from '../reveal_components/Reveal';
 import NumberCounter from '../reveal_components/NumberCounter';
+import { useTranslation } from 'react-i18next';
 
 const Statistics = () => {
+  const { t } = useTranslation();
+
   const stats = [
-    { percentage: '75', description: "Percent of users assess a company's credibility on its website design" },
-    { percentage: '53', description: 'Percent of mobile users abandon sites that take longer than 3 seconds to load' },
-    { percentage: '88', description: 'Percent of online consumers are less likely to return after a bad user experience' },
+    { percentage: '75', description: t('statistics.credibility') },
+    { percentage: '53', description: t('statistics.abandonment') },
+    { percentage: '88', description: t('statistics.userExperience') },
   ];
 
   return (

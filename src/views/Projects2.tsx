@@ -3,6 +3,7 @@ import './styles/Projects2.css';
 import { useRef } from 'react';
 import { projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
+import { useTranslation } from 'react-i18next';
 
 interface ProjectsProps {
     anchorRef: React.RefObject<HTMLElement>;
@@ -10,12 +11,13 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = ({ anchorRef, onImageClick }) => {
+    const { t } = useTranslation();
     const imageRef = useRef(null);
 
     return (
         <section className='projects_section' ref={anchorRef}>
             <div>
-                <h1 className='projects_title'>Works</h1>
+                <h1 className='projects_title'>{t('projects.title')}</h1>
             </div>
             <div className='project_card_container'>
                 {projects.map((project, index) => (
