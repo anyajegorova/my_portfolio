@@ -21,7 +21,6 @@ const Contact: React.FC<ContactProps> = ({ anchorRef }) => {
                     form.current,
                     'lMaEZmQbs-phf2SCI')
                 .then((result) => {
-                    console.log(result.text);
                     form.current?.reset();
                 },
                     (error) => {
