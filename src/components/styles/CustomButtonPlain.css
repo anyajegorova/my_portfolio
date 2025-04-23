@@ -31,6 +31,6 @@
         font-size: 12px;
     }
     .custom-button-plain .button-text {
-        font-size: 10px;
+        font-size: 0.75em;
     }
 }
