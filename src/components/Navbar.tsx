@@ -22,7 +22,7 @@ const Navbar = ({ handleAboutScroll, handleProjectScroll, handleContactScroll })
             <h3 className={`nav-item ${activeSection === 'contact' ? 'active' : ''}`} onClick={handleContactScroll}>
                 {t('navbar.contact')}
             </h3>
-            <LanguageSwitcher />
+           <h3><LanguageSwitcher /></h3> 
         </nav>
     )
 }
