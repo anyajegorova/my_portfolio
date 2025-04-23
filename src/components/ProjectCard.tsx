@@ -9,7 +9,7 @@ interface ProjectCardProps {
   description: string;
   technologies: string;
   gitHubLink?: string;
-  liveLink?: string; // New optional prop for live link
+  liveLink?: string;
   onImageClick: (image: string) => void;
 }
 
@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, tec
   return (
     <div className='project_card'>
       <div className='project_image' onClick={handleImageClick}>
-        <img src={image} alt={name} />
+        <img src={image} alt={name} loading="lazy" />
       </div>
       <div className='project_content'>
         <Reveal delayOrder={1}><h3 className='project_title'>{name}</h3></Reveal>
