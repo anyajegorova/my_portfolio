@@ -62,6 +62,10 @@
           "sendButton": "Send",
           "quote": "It is easy to make things hard, but hard to make them easy.",
           "quoteAuthor": "Rutger Bregman, Humankind: A Hopeful History"
+        },
+        "footer": {
+          "copyright": "All Rights Reserved",
+          "businessId": "Business ID"
         }
       }
     },
@@ -128,6 +132,10 @@
           "sendButton": "Lähetä",
           "quote": "On helppoa tehdä asioista vaikeita, mutta vaikeaa tehdä niistä helppoja.",
           "quoteAuthor": "Rutger Bregman, Humankind: A Hopeful History"
+        },
+        "footer": {
+          "copyright": "Kaikki oikeudet pidätetään",
+          "businessId": "Y-tunnus"
         }
       }
     }

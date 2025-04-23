@@ -10,7 +10,7 @@
 .copyright_wrapper h3 {
     margin: 0;
     padding: 1em;
-    font-size: 0.75em;
+    font-size: 1rem;
     font-weight: 300;
     color: var(--secondary-color);
     font-family: 'Source Sans 3', sans-serif;
@@ -55,8 +55,8 @@
     }
 
     .copyright_wrapper h3 {
-        font-size: 0.75em;
-        padding: 0.5em;
+        font-size: 0.75rem;
+        padding: 0.5rem;
         line-height: 1.5;
     }
 
@@ -65,10 +65,10 @@
     }
 
     .social_media_wrapper {
-        gap: 0.5em;
+        gap: 0.5rem;
     }
 
     .social_media_wrapper a svg {
-        width: 0.9em;
+        width: 0.9rem;
     }
 }
