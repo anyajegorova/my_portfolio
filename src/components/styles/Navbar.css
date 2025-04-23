@@ -81,7 +81,7 @@
   margin-left: 1rem;
 }
 
-.language-switcher {
+.language_switcher_navigation {
   user-select: none; /* Prevent text selection */
   -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
 }
