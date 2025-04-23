@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import Statistics from './components/Statistics';
 import Approach from './components/Approach';
 import { ActiveSectionContext } from './context/ActiveSectionContext';
+import './utils/i18n';
 
 // Lazy-loaded components
 const Projects2 = lazy(() => import('./views/Projects2'));

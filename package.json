@@ -17,8 +17,10 @@
     "@mui/material": "^7.0.2",
     "emailjs": "^4.0.3",
     "framer-motion": "^12.4.10",
+    "i18next": "^25.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-i18next": "^15.5.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

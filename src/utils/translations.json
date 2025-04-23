@@ -1,0 +1,23 @@
+{
+    "en": {
+      "translation": {
+        "navbar": {
+          "logo": "ANNA JEGOROVA",
+          "about": "About",
+          "projects": "Works",
+          "contact": "Contact"
+        }
+      }
+    },
+    "fi": {
+      "translation": {
+        "navbar": {
+          "logo": "ANNA JEGOROVA",
+          "about": "Tietoa",
+          "projects": "Työt",
+          "contact": "Yhteystiedot"
+        }
+      }
+    }
+  }
+  

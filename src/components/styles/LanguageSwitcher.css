@@ -1,0 +1,22 @@
+.language-link {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.language-link:hover {
+    text-decoration: underline;
+}
+
+.language-link.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.separator {
+    margin: 0 5px;
+    color: var(--secondary-color-subtle)
+}
