@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import Statistics from './components/Statistics';
 import Approach from './components/Approach';
 import { ActiveSectionContext } from './context/ActiveSectionContext';
+import './utils/i18n';
 
 // Lazy-loaded components
 const Projects2 = lazy(() => import('./views/Projects2'));
@@ -25,6 +26,8 @@ function App() {
   const anchorRefAbout = useRef<HTMLDivElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState('');
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const lastScrollY = useRef(0);
 
   const handleProjectScroll = () => {
     if (anchorRefProject.current) {
@@ -43,6 +46,16 @@ function App() {
   };
 
   const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY.current) {
+      setIsNavbarVisible(false); // Scrolling down
+    } else {
+      setIsNavbarVisible(true); // Scrolling up
+    }
+
+    lastScrollY.current = currentScrollY;
+
     const aboutSection = document.getElementById('about');
     const projectsSection = document.getElementById('projects');
     const contactSection = document.getElementById('contact');
@@ -81,7 +94,12 @@ function App() {
 
   return (
     <ActiveSectionContext.Provider value={{ activeSection, setActiveSection }}>
-      <Navbar handleAboutScroll={handleAboutScroll} handleProjectScroll={handleProjectScroll} handleContactScroll={handleContactScroll} />
+      <Navbar
+        isVisible={isNavbarVisible}
+        handleAboutScroll={handleAboutScroll}
+        handleProjectScroll={handleProjectScroll}
+        handleContactScroll={handleContactScroll}
+      />
       <div id="about">
         <About2 anchorRef={anchorRefAbout} handleProjectScroll={handleProjectScroll} />
       </div>

@@ -1,0 +1,142 @@
+{
+    "en": {
+      "translation": {
+        "navbar": {
+          "logo": "ANNA JEGOROVA",
+          "about": "About",
+          "projects": "Works",
+          "contact": "Contact"
+        },
+        "projects": {
+          "title": "Works",
+          "avustavaEnkeli": {
+            "name": "Avustava Enkeli",
+            "description": "Avustava Enkeli is a web application offering professional cleaning and assistant services for households in Vantaa. The project aims to provide a user-friendly interface for customers to learn about the services offered, view pricing, and contact the company for bookings."
+          },
+          "sayIt": {
+            "name": "SayIt!",
+            "description": "Responsive full-stack MERN chat-like web application. Register, create a topic, say something and like what other users say. Users can also delete their own messages and topics, edit profile, and see liked messages."
+          }
+        },
+        "profileCard": {
+          "title": "Web Solutions That Help Your Business Grow",
+          "description": "Need a fast, modern website that actually converts visitors into customers? I build custom websites and web applications that are not just beautiful — but strategic, user-friendly, and built to grow your business.",
+          "buttonText": "View Work"
+        },
+        "projectCard": {
+          "viewLive": "View Live",
+          "viewGitHub": "View on GitHub"
+        },
+        "statistics": {
+          "credibility": "Percent of users assess a company's credibility on its website design",
+          "abandonment": "Percent of mobile users abandon sites that take longer than 3 seconds to load",
+          "userExperience": "Percent of online consumers are less likely to return after a bad user experience"
+        },
+        "approach": {
+          "title": "From Data to Design",
+          "understandGoals": {
+            "title": "Understand Goals",
+            "description": "We start by diving deep into your business objectives and user needs."
+          },
+          "designWithPurpose": {
+            "title": "Design with Purpose",
+            "description": "Creating meaningful and engaging UI/UX centered around users."
+          },
+          "buildEfficiently": {
+            "title": "Build Efficiently",
+            "description": "Developing responsive, scalable, and maintainable code."
+          },
+          "refineAndOptimize": {
+            "title": "Refine & Optimize",
+            "description": "We fine-tune your solution to meet business goals and user delight."
+          }
+        },
+        "contact": {
+          "title": "Let's Get in Touch.",
+          "nameLabel": "Name",
+          "namePlaceholder": "Name",
+          "emailLabel": "Email",
+          "emailPlaceholder": "Email",
+          "messageLabel": "Message",
+          "messagePlaceholder": "Message",
+          "sendButton": "Send",
+          "quote": "It is easy to make things hard, but hard to make them easy.",
+          "quoteAuthor": "Rutger Bregman, Humankind: A Hopeful History"
+        },
+        "footer": {
+          "copyright": "All Rights Reserved",
+          "businessId": "Business ID"
+        }
+      }
+    },
+    "fi": {
+      "translation": {
+        "navbar": {
+          "logo": "ANNA JEGOROVA",
+          "about": "Tietoa",
+          "projects": "Työt",
+          "contact": "Ota yhteyttä"
+        },
+        "projects": {
+          "title": "Työt",
+          "avustavaEnkeli": {
+            "name": "Avustava Enkeli",
+            "description": "Avustava Enkeli on verkkosovellus, joka tarjoaa ammattimaisia siivous- ja avustajapalveluita kotitalouksille Vantaalla. Projektin tavoitteena on tarjota käyttäjäystävällinen käyttöliittymä, jonka avulla asiakkaat voivat tutustua tarjottuihin palveluihin, tarkastella hintoja ja ottaa yhteyttä yritykseen varauksia varten."
+          },
+          "sayIt": {
+            "name": "SayIt!",
+            "description": "Responsiivinen full-stack MERN chat-tyylinen verkkosovellus. Rekisteröidy, luo aihe, sano jotain ja tykkää muiden käyttäjien sanomisista. Käyttäjät voivat myös poistaa omia viestejään ja aiheitaan, muokata profiiliaan ja nähdä tykkäyksiä."
+          }
+        },
+        "profileCard": {
+          "title": "Verkkoratkaisut, jotka auttavat yritystäsi kasvamaan",
+          "description": "Tarvitsetko nopean, modernin verkkosivuston, joka todella muuntaa kävijät asiakkaiksi? Rakennan räätälöityjä verkkosivustoja ja -sovelluksia, jotka eivät ole vain kauniita — vaan strategisia, käyttäjäystävällisiä ja suunniteltu kasvattamaan yritystäsi.",
+          "buttonText": "Katso työt"
+        },
+        "projectCard": {
+          "viewLive": "Näytä livenä",
+          "viewGitHub": "Näytä GitHubissa"
+        },
+        "statistics": {
+          "credibility": "Prosenttiosuus käyttäjistä arvioi yrityksen uskottavuutta sen verkkosivuston suunnittelun perusteella",
+          "abandonment": "Prosenttiosuus mobiilikäyttäjistä hylkää sivustot, joiden lataaminen kestää yli 3 sekuntia",
+          "userExperience": "Prosenttiosuus verkkokuluttajista on vähemmän todennäköisiä palaamaan huonon käyttökokemuksen jälkeen"
+        },
+        "approach": {
+          "title": "Datasta suunnitteluun",
+          "understandGoals": {
+            "title": "Ymmärrä tavoitteet",
+            "description": "Aloitamme syventymällä liiketoimintatavoitteisiisi ja käyttäjien tarpeisiin."
+          },
+          "designWithPurpose": {
+            "title": "Suunnittele tarkoituksella",
+            "description": "Luomme merkityksellistä ja mukaansatempaavaa UI/UX:ää käyttäjien ympärille."
+          },
+          "buildEfficiently": {
+            "title": "Rakenna tehokkaasti",
+            "description": "Kehitämme responsiivista, skaalautuvaa ja ylläpidettävää koodia."
+          },
+          "refineAndOptimize": {
+            "title": "Viimeistele ja optimoi",
+            "description": "Viilaamme ratkaisusi vastaamaan liiketoimintatavoitteita ja käyttäjien odotuksia."
+          }
+        },
+        "contact": {
+          "title": "Ota yhteyttä.",
+          "nameLabel": "Nimi",
+          "namePlaceholder": "Nimi",
+          "emailLabel": "Sähköposti",
+          "emailPlaceholder": "Sähköposti",
+          "messageLabel": "Viesti",
+          "messagePlaceholder": "Viesti",
+          "sendButton": "Lähetä",
+          "quote": "On helppoa tehdä asioista vaikeita, mutta vaikeaa tehdä niistä helppoja.",
+          "quoteAuthor": "Rutger Bregman, Humankind: A Hopeful History"
+        },
+        "footer": {
+          "copyright": "Kaikki oikeudet pidätetään",
+          "businessId": "Y-tunnus"
+        }
+      }
+    }
+  }

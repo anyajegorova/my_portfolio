@@ -3,12 +3,14 @@ import './styles/Contact.css';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import Reveal from '../reveal_components/Reveal';
+import { useTranslation } from 'react-i18next';
 
 interface ContactProps {
     anchorRef: React.RefObject<HTMLElement>;
 }
 
 const Contact: React.FC<ContactProps> = ({ anchorRef }) => {
+    const { t } = useTranslation();
     const form = useRef<HTMLFormElement>(null);
 
     const handleClick = (event: { preventDefault: () => void; }) => {
@@ -33,14 +35,14 @@ const Contact: React.FC<ContactProps> = ({ anchorRef }) => {
         <section className='contact_section' ref={anchorRef}>
             <Reveal width='100%' delayOrder={2}>
                 <form className='contact_form' ref={form} onSubmit={handleClick}>
-                    <h2>Let's Get in Touch.</h2>
-                    <label htmlFor="user_name">Name</label>
-                    <input type='text' name='user_name' placeholder='Name' />
-                    <label htmlFor="user_email">Email</label>
-                    <input type='email' name='user_email' placeholder='Email' />
-                    <label htmlFor="message">Message</label>
-                    <textarea placeholder='Message' name='message' ref={anchorRef}></textarea>
-                    <button type='submit'>Send</button>
+                    <h2>{t('contact.title')}</h2>
+                    <label htmlFor="user_name">{t('contact.nameLabel')}</label>
+                    <input type='text' name='user_name' placeholder={t('contact.namePlaceholder')} />
+                    <label htmlFor="user_email">{t('contact.emailLabel')}</label>
+                    <input type='email' name='user_email' placeholder={t('contact.emailPlaceholder')} />
+                    <label htmlFor="message">{t('contact.messageLabel')}</label>
+                    <textarea placeholder={t('contact.messagePlaceholder')} name='message' ref={anchorRef}></textarea>
+                    <button type='submit'>{t('contact.sendButton')}</button>
                 </form>
             </Reveal>
             <Reveal width='100%' delayOrder={2}>
@@ -60,13 +62,11 @@ const Contact: React.FC<ContactProps> = ({ anchorRef }) => {
                         </g>
                     </svg>
                     <p>
-                        <cite>It is easy to make things hard, but hard to make them easy. </cite>
-                        - Rutger Bregman, Humankind: A Hopeful History
+                        <cite>{t('contact.quote')}</cite>
+                        - {t('contact.quoteAuthor')}
                     </p>
-                </div></Reveal>
-
-
-
+                </div>
+            </Reveal>
         </section>
     )
 }

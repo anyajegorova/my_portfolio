@@ -1,12 +1,16 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './styles/Footer.css';
 
 const Footer = () => {
+    const { t } = useTranslation();
+
     return (
         <footer className='footer'>
             <div className='copyright_wrapper'>
                 <h3>
-                    All Rights Reserved &copy; 2025 &nbsp;&nbsp;&nbsp;Anna Jegorova&nbsp;&nbsp;&nbsp;Business ID: 3526300-3
+                    {t('footer.copyright')} &copy; 2025 &nbsp;&nbsp;&nbsp;Anna Jegorova<br />
+                    {t('footer.businessId')}: 3526300-3
                 </h3>
             </div>
             <div className='social_media_wrapper'>
