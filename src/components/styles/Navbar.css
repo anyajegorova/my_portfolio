@@ -81,6 +81,11 @@
   margin-left: 1rem;
 }
 
+.language_switcher_navigation {
+  user-select: none; /* Prevent text selection */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
 @media (max-width: 768px) {
   .navigation {
     padding: 10px;
