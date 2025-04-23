@@ -28,4 +28,6 @@
   border: none;
   color: var(--primary-color-background);
   cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
