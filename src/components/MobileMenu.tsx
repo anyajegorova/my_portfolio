@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './styles/MobileMenu.css';
 import { useTranslation } from 'react-i18next';
 import { ActiveSectionContext } from '../context/ActiveSectionContext';
@@ -6,6 +6,13 @@ import { ActiveSectionContext } from '../context/ActiveSectionContext';
 const MobileMenu = ({ handleAboutScroll, handleProjectScroll, handleContactScroll, closeMenu }) => {
     const { t } = useTranslation();
     const { activeSection } = useContext(ActiveSectionContext);
+
+    useEffect(() => {
+        document.body.classList.add('no-scroll');
+        return () => {
+            document.body.classList.remove('no-scroll');
+        };
+    }, []);
 
     const handleClick = (scrollFunction) => {
         scrollFunction();

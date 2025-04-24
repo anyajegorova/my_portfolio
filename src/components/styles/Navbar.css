@@ -79,6 +79,8 @@
   cursor: pointer;
   color: var(--secondary-color);
   margin-left: 1rem;
+  user-select: none; /* Prevent text selection */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
 }
 
 .language_switcher_navigation {
