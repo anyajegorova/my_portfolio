@@ -36,3 +36,7 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
