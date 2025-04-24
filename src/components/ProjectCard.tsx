@@ -30,14 +30,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, image, description, tec
         <Reveal delayOrder={2}><p className='project_technologies'>{technologies}</p></Reveal>
         <Reveal delayOrder={3}><p className='project_description'>{t(description)}</p></Reveal>
         {liveLink && (
-          <Reveal delayOrder={4}>
+          <Reveal delayOrder={3}>
             <a href={liveLink} className='project_link' target='_blank' rel='noopener noreferrer'>
               <CustomButtonPlain text={t('projectCard.viewLive')} />
             </a>
           </Reveal>
         )}
         {gitHubLink && (
-          <Reveal delayOrder={4}>
+          <Reveal delayOrder={3}>
             <a href={gitHubLink} className='project_link' target='_blank' rel='noopener noreferrer'>
               <CustomButtonPlain text={t('projectCard.viewGitHub')} />
             </a>
