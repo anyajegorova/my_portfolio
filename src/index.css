@@ -43,7 +43,7 @@ body {
   background-color: var(--primary-color-background);
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
 }
 a {
   text-decoration: none;

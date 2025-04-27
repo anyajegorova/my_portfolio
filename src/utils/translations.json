@@ -108,6 +108,13 @@
             "title": "Contact",
             "description": "If you have any questions about this Privacy Policy, please contact us through the contact form."
           }
+        },
+        "cookieConsent": {
+          "accept": "Accept",
+          "decline": "Decline",
+          "message": "We use cookies to improve your browsing experience and analyze website traffic through Google Analytics.",
+          "privacyPolicyLink": "See our Privacy Policy",
+          "moreDetails": "for more details."
         }
       }
     },
@@ -220,6 +227,13 @@
             "title": "Yhteystiedot",
             "description": "Jos sinulla on kysyttävää tästä tietosuojakäytännöstä, ota meihin yhteyttä yhteydenottolomakkeen kautta."
           }
+        },
+        "cookieConsent": {
+          "accept": "Hyväksy",
+          "decline": "Hylkää",
+          "message": "Käytämme evästeitä parantaaksemme selauskokemustasi ja analysoidaksemme verkkosivuston liikennettä Google Analyticsin avulla.",
+          "privacyPolicyLink": "Katso tietosuojakäytäntömme",
+          "moreDetails": "lisätietoja varten."
         }
       }
     }

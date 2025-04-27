@@ -1,33 +1,37 @@
 import React, { useEffect } from 'react'
 import CookieConsent, { Cookies } from 'react-cookie-consent'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
-const CookieConsentPopup = () => {
+const CookieConsentPopup: React.FC = () => { // Added React.FC type
+    const GA_ID: string | undefined = import.meta.env.VITE_GA_MEASUREMENT_ID;
+    const { t } = useTranslation()
+
     useEffect(() => {
-        const consent = Cookies.get('CookieConsent');
+        const consent: string | undefined = Cookies.get('CookieConsent') 
         if (consent === "true") {
             // User accepted cookies
-            const script1 = document.createElement('script');
-            script1.src = `https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`; // <-- Your GA ID here
-            script1.async = true;
-            document.head.appendChild(script1);
+            const script1: HTMLScriptElement = document.createElement('script') 
+            script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
+            script1.async = true
+            document.head.appendChild(script1)
 
-            const script2 = document.createElement('script');
+            const script2: HTMLScriptElement = document.createElement('script')
             script2.innerHTML = `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-XXXXXXXXXX');
-            `;
-            document.head.appendChild(script2);
+              gtag('config', '${GA_ID}');
+            `
+            document.head.appendChild(script2)
         }
-    }, []);
+    }, [GA_ID])
 
     return (
         <CookieConsent
             location="bottom"
-            buttonText="Accept"
-            declineButtonText="Decline"
+            buttonText={t('cookieConsent.accept')}
+            declineButtonText={t('cookieConsent.decline')}
             cookieName="CookieConsent"
             style={{
                 background: "#1C1C1E",
@@ -35,6 +39,7 @@ const CookieConsentPopup = () => {
                 padding: "10px",
                 textAlign: "center",
                 justifyContent: "center",
+                flexWrap: "wrap"
             }}
             buttonStyle={{
                 background: "#fff",
@@ -58,14 +63,13 @@ const CookieConsentPopup = () => {
             enableDeclineButton
             expires={150}
         >
-            We use cookies to improve your browsing experience and analyze website traffic through Google Analytics.{" "}
-            By clicking "Accept", you consent to the use of cookies.{" "}
+            {t('cookieConsent.message')}{" "}
             <Link to="/privacy-policy" style={{ color: "#00c3ff", textDecoration: "underline" }}>
-                See our Privacy Policy
+                {t('cookieConsent.privacyPolicyLink')}
             </Link>{" "}
-            for more details.
+            {t('cookieConsent.moreDetails')}
         </CookieConsent>
-    );
+    )
 }
 
-export default CookieConsentPopup;
+export default CookieConsentPopup
