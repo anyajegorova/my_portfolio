@@ -17,34 +17,45 @@ const Navbar = ({ isVisible, handleAboutScroll, handleProjectScroll, handleConta
 
     return (
         <nav className={`navigation ${isVisible ? 'visible' : 'hidden'}`}>
-            <div className='nav_link'><Link to="/" className={`logo ${activeSection === 'about' ? 'active' : ''}`} onClick={handleAboutScroll}>
-                {t('navbar.logo')}
-            </Link></div>
-            <div className="desktop-menu">
-                <div className='nav_link'><Link to="/" className={`nav-item ${activeSection === 'about' ? 'active' : ''}`} onClick={handleAboutScroll}>
-                    {t('navbar.about')}
-                </Link></div>
-                <div className='nav_link'><Link to="/" className={`nav-item ${activeSection === 'projects' ? 'active' : ''}`} onClick={handleProjectScroll}>
-                    {t('navbar.projects')}
-                </Link></div>
-                <div className='nav_link'><Link to="/" className={`nav-item ${activeSection === 'contact' ? 'active' : ''}`} onClick={handleContactScroll}>
-                    {t('navbar.contact')}
-                </Link></div>
+            <div className={`nav_link ${activeSection === 'about' ? 'active' : ''}`}>
+                <Link to="/" className="logo" onClick={handleAboutScroll}>
+                    {t('navbar.logo')}
+                </Link>
             </div>
-            <div className='nav_link language_switcher_navigation'><LanguageSwitcher /></div>
-            <div className="mobile-menu">
-                <button className="hamburger" onClick={toggleMobileMenu}>
-                    ☰
-                </button>
+            <div className='nav_link_language_switcher_wrapper'>
+                <div className="desktop-menu">
+                    <div className={`nav_link ${activeSection === 'about' ? 'active' : ''}`}>
+                        <Link to="/" className="nav-item" onClick={handleAboutScroll}>
+                            {t('navbar.about')}
+                        </Link>
+                    </div>
+                    <div className={`nav_link ${activeSection === 'projects' ? 'active' : ''}`}>
+                        <Link to="/" className="nav-item" onClick={handleProjectScroll}>
+                            {t('navbar.projects')}
+                        </Link>
+                    </div>
+                    <div className={`nav_link ${activeSection === 'contact' ? 'active' : ''}`}>
+                        <Link to="/" className="nav-item" onClick={handleContactScroll}>
+                            {t('navbar.contact')}
+                        </Link>
+                    </div>
+                </div>
+                <div className='language_switcher_navigation'><LanguageSwitcher /></div>
+                <div className="mobile-menu">
+                    <button className="hamburger" onClick={toggleMobileMenu}>
+                        ☰
+                    </button>
+                </div>
+                {isMobileMenuOpen && (
+                    <MobileMenu
+                        handleAboutScroll={handleAboutScroll}
+                        handleProjectScroll={handleProjectScroll}
+                        handleContactScroll={handleContactScroll}
+                        closeMenu={toggleMobileMenu}
+                    />
+                )}
             </div>
-            {isMobileMenuOpen && (
-                <MobileMenu
-                    handleAboutScroll={handleAboutScroll}
-                    handleProjectScroll={handleProjectScroll}
-                    handleContactScroll={handleContactScroll}
-                    closeMenu={toggleMobileMenu}
-                />
-            )}
+
         </nav>
     );
 };
