@@ -91,6 +91,7 @@
 .language_switcher_navigation {
   user-select: none; /* Prevent text selection */
   -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+  margin-left: 1rem;
 }
 
 @media (max-width: 768px) {
