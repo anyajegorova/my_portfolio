@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import './styles/MobileMenu.css';
 import { useTranslation } from 'react-i18next';
 import { ActiveSectionContext } from '../context/ActiveSectionContext';
+import { Link } from 'react-router-dom'; // for internal pages like Privacy Policy
 
 const MobileMenu = ({ handleAboutScroll, handleProjectScroll, handleContactScroll, closeMenu }) => {
     const { t } = useTranslation();

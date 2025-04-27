@@ -19,3 +19,15 @@
     margin: 0 5px;
     color: var(--secondary-color-subtle)
 }
+
+@media (max-width: 768px) {
+    .language-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-link {
+        font-size: 0.8rem;
+    }
+}

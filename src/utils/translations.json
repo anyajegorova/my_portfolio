@@ -66,6 +66,55 @@
         "footer": {
           "copyright": "All Rights Reserved",
           "businessId": "Business ID"
+        },
+        "privacyPolicy": {
+          "title": "Privacy Policy",
+          "lastUpdated": "Last updated: 27.04.2025",
+          "informationWeCollect": {
+            "title": "Information We Collect",
+            "description": "We use Google Analytics to collect basic information about how visitors use our website. This includes:",
+            "list": [
+              "Pages visited",
+              "Time spent on pages",
+              "Browser and device information",
+              "Country (general, not exact location)"
+            ],
+            "additionalInfo": "We do not collect any personal data such as names, email addresses, or phone numbers through tracking. If you choose to contact us through the contact form, any information you provide (such as your email address or message) will only be used to respond to your inquiry and will not be shared with third parties."
+          },
+          "cookies": {
+            "title": "Cookies",
+            "description": "We use cookies to:",
+            "list": [
+              "Analyze website traffic (Google Analytics)"
+            ],
+            "additionalInfo": "Cookies are small text files stored on your device to improve your experience. You can accept or decline cookies when visiting our site."
+          },
+          "yourRights": {
+            "title": "Your Rights",
+            "description": "Under the General Data Protection Regulation (GDPR), you have the right to:",
+            "list": [
+              "Request access to your personal data",
+              "Request correction of your personal data",
+              "Request deletion of your personal data",
+              "Withdraw your consent at any time"
+            ],
+            "additionalInfo": "If you have any questions or concerns about your data, please contact us through the contact form."
+          },
+          "changes": {
+            "title": "Changes to This Privacy Policy",
+            "description": "We may update this Privacy Policy occasionally. Any changes will be posted on this page."
+          },
+          "contact": {
+            "title": "Contact",
+            "description": "If you have any questions about this Privacy Policy, please contact us through the contact form."
+          }
+        },
+        "cookieConsent": {
+          "accept": "Accept",
+          "decline": "Decline",
+          "message": "We use cookies to improve your browsing experience and analyze website traffic through Google Analytics.",
+          "privacyPolicyLink": "See our Privacy Policy",
+          "moreDetails": "for more details."
         }
       }
     },
@@ -136,6 +185,55 @@
         "footer": {
           "copyright": "Kaikki oikeudet pidätetään",
           "businessId": "Y-tunnus"
+        },
+        "privacyPolicy": {
+          "title": "Tietosuojakäytäntö",
+          "lastUpdated": "Päivitetty: 27.04.2025",
+          "informationWeCollect": {
+            "title": "Keräämämme tiedot",
+            "description": "Käytämme Google Analyticsia kerätäksemme perustietoja siitä, miten kävijät käyttävät verkkosivustoamme. Tämä sisältää:",
+            "list": [
+              "Vieraillut sivut",
+              "Sivuilla vietetty aika",
+              "Selaimen ja laitteen tiedot",
+              "Maa (yleinen, ei tarkka sijainti)"
+            ],
+            "additionalInfo": "Emme kerää henkilökohtaisia tietoja, kuten nimiä, sähköpostiosoitteita tai puhelinnumeroita seurannan kautta. Jos päätät ottaa meihin yhteyttä yhteydenottolomakkeen kautta, antamiasi tietoja (kuten sähköpostiosoite tai viesti) käytetään vain kyselyysi vastaamiseen, eikä niitä jaeta kolmansille osapuolille."
+          },
+          "cookies": {
+            "title": "Evästeet",
+            "description": "Käytämme evästeitä:",
+            "list": [
+              "Analysoidaksemme verkkosivuston liikennettä (Google Analytics)"
+            ],
+            "additionalInfo": "Evästeet ovat pieniä tekstitiedostoja, jotka tallennetaan laitteellesi parantamaan käyttökokemustasi. Voit hyväksyä tai hylätä evästeet vieraillessasi sivustollamme."
+          },
+          "yourRights": {
+            "title": "Oikeutesi",
+            "description": "Yleisen tietosuoja-asetuksen (GDPR) mukaisesti sinulla on oikeus:",
+            "list": [
+              "Pyytää pääsyä henkilötietoihisi",
+              "Pyytää henkilötietojesi korjaamista",
+              "Pyytää henkilötietojesi poistamista",
+              "Peruuttaa suostumuksesi milloin tahansa"
+            ],
+            "additionalInfo": "Jos sinulla on kysyttävää tai huolenaiheita tiedoistasi, ota meihin yhteyttä yhteydenottolomakkeen kautta."
+          },
+          "changes": {
+            "title": "Muutokset tähän tietosuojakäytäntöön",
+            "description": "Saatamme päivittää tätä tietosuojakäytäntöä ajoittain. Kaikki muutokset julkaistaan tällä sivulla."
+          },
+          "contact": {
+            "title": "Yhteystiedot",
+            "description": "Jos sinulla on kysyttävää tästä tietosuojakäytännöstä, ota meihin yhteyttä yhteydenottolomakkeen kautta."
+          }
+        },
+        "cookieConsent": {
+          "accept": "Hyväksy",
+          "decline": "Hylkää",
+          "message": "Käytämme evästeitä parantaaksemme selauskokemustasi ja analysoidaksemme verkkosivuston liikennettä Google Analyticsin avulla.",
+          "privacyPolicyLink": "Katso tietosuojakäytäntömme",
+          "moreDetails": "lisätietoja varten."
         }
       }
     }
