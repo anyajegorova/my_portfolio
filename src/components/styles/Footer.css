@@ -53,6 +53,9 @@
     .social_media_wrapper a svg {
         width: 1em;
     }
+    .links_wrapper h3{
+        font-size: 0.75em;
+    }
 }
 
 /* Media query for mobile */
