@@ -13,6 +13,7 @@ import Statistics from './components/Statistics';
 import Approach from './components/Approach';
 import { ActiveSectionContext } from './context/ActiveSectionContext';
 import './utils/i18n';
+import CookieConsentPopup from './components/CookieConsentPopup';
 
 // Lazy-loaded components
 const Projects2 = lazy(() => import('./views/Projects2'));
@@ -125,6 +126,7 @@ function App() {
           <ImageModal image={modalImage} onClose={handleCloseModal} />
         </Suspense>
       )}
+      <CookieConsentPopup />
     </ActiveSectionContext.Provider>
   );
 }
