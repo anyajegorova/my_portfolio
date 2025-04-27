@@ -89,9 +89,12 @@
 }
 
 .language_switcher_navigation {
+  display: flex;
   user-select: none; /* Prevent text selection */
   -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
   margin-left: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {

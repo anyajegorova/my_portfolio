@@ -51,8 +51,7 @@ const Navbar = ({ isVisible, handleAboutScroll, handleProjectScroll, handleConta
                         handleAboutScroll={handleAboutScroll}
                         handleProjectScroll={handleProjectScroll}
                         handleContactScroll={handleContactScroll}
-                        closeMenu={toggleMobileMenu}
-                    />
+                        closeMenu={toggleMobileMenu}                  />
                 )}
             </div>
 
