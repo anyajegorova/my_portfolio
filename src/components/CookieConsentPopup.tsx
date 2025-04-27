@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import CookieConsent, { Cookies } from 'react-cookie-consent'
+import { Link } from 'react-router-dom';
 
 const CookieConsentPopup = () => {
     useEffect(() => {
@@ -59,9 +60,9 @@ const CookieConsentPopup = () => {
         >
             We use cookies to improve your browsing experience and analyze website traffic through Google Analytics.{" "}
             By clicking "Accept", you consent to the use of cookies.{" "}
-            <a href="/privacy-policy" style={{ color: "#00c3ff", textDecoration: "underline" }}>
+            <Link to="/privacy-policy" style={{ color: "#00c3ff", textDecoration: "underline" }}>
                 See our Privacy Policy
-            </a>{" "}
+            </Link>{" "}
             for more details.
         </CookieConsent>
     );

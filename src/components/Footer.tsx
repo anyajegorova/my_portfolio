@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const { t } = useTranslation();
@@ -12,6 +13,12 @@ const Footer = () => {
                     {t('footer.copyright')} &copy; 2025 &nbsp;&nbsp;&nbsp;Anna Jegorova<br />
                     {t('footer.businessId')}: 3526300-3
                 </h3>
+                
+            </div>
+            <div className='links_wrapper'>
+                <h3><Link to="/privacy-policy">
+                    Privacy Policy
+                </Link></h3>
             </div>
             <div className='social_media_wrapper'>
                 <a href='https://github.com/anyajegorova' target='blank'>

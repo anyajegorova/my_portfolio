@@ -14,6 +14,12 @@ import Approach from './components/Approach';
 import { ActiveSectionContext } from './context/ActiveSectionContext';
 import './utils/i18n';
 import CookieConsentPopup from './components/CookieConsentPopup';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from 'react-router-dom';
+import PrivacyPolicy from './views/PrivacyPolicy';
 
 // Lazy-loaded components
 const Projects2 = lazy(() => import('./views/Projects2'));
@@ -95,38 +101,53 @@ function App() {
 
   return (
     <ActiveSectionContext.Provider value={{ activeSection, setActiveSection }}>
-      <Navbar
-        isVisible={isNavbarVisible}
-        handleAboutScroll={handleAboutScroll}
-        handleProjectScroll={handleProjectScroll}
-        handleContactScroll={handleContactScroll}
-      />
-      <div id="about">
-        <About2 anchorRef={anchorRefAbout} handleProjectScroll={handleProjectScroll} />
-      </div>
-      <div id="statistics">
-        <Statistics />
-      </div>
-      <div id="approach">
-        <Approach />
-      </div>
-      <Suspense fallback={<div>Loading projects…</div>}>
-        <div id="projects">
-          <Projects2 anchorRef={anchorRefProject} onImageClick={handleImageClick} />
-        </div>
-      </Suspense>
-      <Suspense fallback={<div>Loading contact…</div>}>
-        <div id="contact">
-          <Contact anchorRef={anchorRefContact} />
-        </div>
-      </Suspense>
-      <Footer />
-      {isModalOpen && (
-        <Suspense fallback={<div>Loading image…</div>}>
-          <ImageModal image={modalImage} onClose={handleCloseModal} />
-        </Suspense>
-      )}
-      <CookieConsentPopup />
+      <Router>
+        <Navbar
+          isVisible={isNavbarVisible}
+          handleAboutScroll={handleAboutScroll}
+          handleProjectScroll={handleProjectScroll}
+          handleContactScroll={handleContactScroll}
+        />
+        <Routes>
+          <Route
+            path="/privacy-policy"
+            element={<PrivacyPolicy />}
+          />
+          <Route
+            path="/"
+            element={
+              <>
+                <div id="about">
+                  <About2 anchorRef={anchorRefAbout} handleProjectScroll={handleProjectScroll} />
+                </div>
+                <div id="statistics">
+                  <Statistics />
+                </div>
+                <div id="approach">
+                  <Approach />
+                </div>
+                <Suspense fallback={<div>Loading projects…</div>}>
+                  <div id="projects">
+                    <Projects2 anchorRef={anchorRefProject} onImageClick={handleImageClick} />
+                  </div>
+                </Suspense>
+                <Suspense fallback={<div>Loading contact…</div>}>
+                  <div id="contact">
+                    <Contact anchorRef={anchorRefContact} />
+                  </div>
+                </Suspense>
+                <Footer />
+                {isModalOpen && (
+                  <Suspense fallback={<div>Loading image…</div>}>
+                    <ImageModal image={modalImage} onClose={handleCloseModal} />
+                  </Suspense>
+                )}
+              </>
+            }
+          />
+        </Routes>
+        <CookieConsentPopup />
+      </Router>
     </ActiveSectionContext.Provider>
   );
 }

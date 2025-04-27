@@ -4,6 +4,7 @@ import { ActiveSectionContext } from '../context/ActiveSectionContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenu from './MobileMenu';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ isVisible, handleAboutScroll, handleProjectScroll, handleContactScroll }) => {
     const { activeSection } = useContext(ActiveSectionContext);
@@ -16,21 +17,21 @@ const Navbar = ({ isVisible, handleAboutScroll, handleProjectScroll, handleConta
 
     return (
         <nav className={`navigation ${isVisible ? 'visible' : 'hidden'}`}>
-            <span className={`logo ${activeSection === 'about' ? 'active' : ''}`} onClick={handleAboutScroll}>
+            <div className='nav_link'><Link to="/" className={`logo ${activeSection === 'about' ? 'active' : ''}`} onClick={handleAboutScroll}>
                 {t('navbar.logo')}
-            </span>
+            </Link></div>
             <div className="desktop-menu">
-                <h3 className={`nav-item ${activeSection === 'about' ? 'active' : ''}`} onClick={handleAboutScroll}>
+                <div className='nav_link'><Link to="/" className={`nav-item ${activeSection === 'about' ? 'active' : ''}`} onClick={handleAboutScroll}>
                     {t('navbar.about')}
-                </h3>
-                <h3 className={`nav-item ${activeSection === 'projects' ? 'active' : ''}`} onClick={handleProjectScroll}>
+                </Link></div>
+                <div className='nav_link'><Link to="/" className={`nav-item ${activeSection === 'projects' ? 'active' : ''}`} onClick={handleProjectScroll}>
                     {t('navbar.projects')}
-                </h3>
-                <h3 className={`nav-item ${activeSection === 'contact' ? 'active' : ''}`} onClick={handleContactScroll}>
+                </Link></div>
+                <div className='nav_link'><Link to="/" className={`nav-item ${activeSection === 'contact' ? 'active' : ''}`} onClick={handleContactScroll}>
                     {t('navbar.contact')}
-                </h3>
+                </Link></div>
             </div>
-            <h3 className='language_switcher_navigation'><LanguageSwitcher /></h3>
+            <div className='nav_link language_switcher_navigation'><LanguageSwitcher /></div>
             <div className="mobile-menu">
                 <button className="hamburger" onClick={toggleMobileMenu}>
                     ☰

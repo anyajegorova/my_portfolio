@@ -33,7 +33,7 @@
   transition: text-shadow color 0.3s ease-in-out;
 }
 
-.navigation h3 {
+.navigation {
   margin: 0;
   font-size: 1.2rem;
   padding: 1rem 1.5rem;
@@ -42,15 +42,15 @@
   transition: color 0.3s ease-in-out;
 }
 
-.navigation h3:hover {
+.navigation .nav_link:hover {
   color: var(--accent-color-hover);
 }
 
-.navigation h3.active {
+.navigation .nav_link.active {
   color: var(--accent-color-hover);
 }
 
-.navigation h3:last-child {
+.navigation .nav_link:last-child {
   margin-left: 4rem;
   background-color: var(--accent-color-lilac);
   color: var(--secondary-color);
@@ -66,6 +66,7 @@
 
 .desktop-menu {
   display: flex;
+  align-items: center;
 }
 
 .mobile-menu {
@@ -99,7 +100,7 @@
     margin-left: 1em;
   }
 
-  .navigation h3 {
+  .navigation .nav_link {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
@@ -112,8 +113,8 @@
     display: block;
   }
 
-  .desktop-menu h3:nth-child(1),
-  .mobile-menu h3,
+  .desktop-menu .nav_link:nth-child(1),
+  .mobile-menu .nav_link,
   .language-switcher {
     margin-left: 4rem;
     background-color: var(--accent-color-lilac);
@@ -125,7 +126,7 @@
 }
 
 @media (max-width: 480px) {
-  .navigation h3 {
+  .navigation .nav_link {
     font-size: 0.75em; 
     padding: 0.5rem;
   }
@@ -134,7 +135,7 @@
     font-size: 0.75em;
   }
 
-  .desktop-menu h3:nth-child(1) {
+  .desktop-menu .nav_link:nth-child(1) {
     margin-left: 4rem;
     background-color: var(--accent-color-lilac);
     color: var(--secondary-color);
