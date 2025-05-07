@@ -25,6 +25,15 @@
   transition: font-weight 0.3s ease;
 }
 
+.mobile-menu-content h3 button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
 .nav-item-mobile.active {
   font-weight: 700;
   color: var(--primary-color-background);
