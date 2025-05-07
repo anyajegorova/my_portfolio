@@ -1,6 +1,16 @@
-import { createContext } from 'react';
+import { createContext, useContext } from 'react';
 
-export const ActiveSectionContext = createContext({
+export type Section = 'about' | 'projects' | 'contact' | 'privacy-policy' | '';
+
+interface ActiveSectionContextType {
+  activeSection: Section;
+  setActiveSection: (section: Section) => void;
+}
+
+export const ActiveSectionContext = createContext<ActiveSectionContextType>({
   activeSection: '',
-  setActiveSection: (section: string) => {}
+  setActiveSection: () => { },
 });
+
+// Optional: Custom hook for easy access
+export const useActiveSection = () => useContext(ActiveSectionContext);

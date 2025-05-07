@@ -6,7 +6,7 @@ import Reveal from '../reveal_components/Reveal';
 import { useTranslation } from 'react-i18next';
 
 interface ContactProps {
-    anchorRef: React.RefObject<HTMLElement>;
+    anchorRef?: React.RefObject<HTMLElement>;
 }
 
 const Contact: React.FC<ContactProps> = ({ anchorRef }) => {
@@ -32,7 +32,7 @@ const Contact: React.FC<ContactProps> = ({ anchorRef }) => {
         }
     }
     return (
-        <section className='contact_section' ref={anchorRef}>
+        <section className='contact_section' >
             <Reveal width='100%' delayOrder={2}>
                 <form className='contact_form' ref={form} onSubmit={handleClick}>
                     <h2>{t('contact.title')}</h2>
@@ -41,7 +41,7 @@ const Contact: React.FC<ContactProps> = ({ anchorRef }) => {
                     <label htmlFor="user_email">{t('contact.emailLabel')}</label>
                     <input type='email' name='user_email' placeholder={t('contact.emailPlaceholder')} />
                     <label htmlFor="message">{t('contact.messageLabel')}</label>
-                    <textarea placeholder={t('contact.messagePlaceholder')} name='message' ref={anchorRef}></textarea>
+                    <textarea placeholder={t('contact.messagePlaceholder')} name='message' ></textarea>
                     <button type='submit'>{t('contact.sendButton')}</button>
                 </form>
             </Reveal>

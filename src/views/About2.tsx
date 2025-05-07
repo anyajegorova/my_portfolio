@@ -7,10 +7,10 @@ interface AboutProps {
     handleProjectScroll: () => void;
 }
 
-const About: React.FC<AboutProps> = ({ anchorRef, handleProjectScroll }) => {
+const About: React.FC<AboutProps> = ({ handleProjectScroll }) => {
 
     return (
-        <section className="about-section" ref={anchorRef}>
+        <section className="about-section">
             <ProfileCard handleProjectScroll={handleProjectScroll} />
         </section>
     );

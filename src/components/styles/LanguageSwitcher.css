@@ -1,3 +1,7 @@
+.language-switcher{
+    display: flex;
+    flex-wrap: nowrap;
+}
 .language-link {
     background: none;
     border: none;
