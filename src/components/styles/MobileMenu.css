@@ -25,7 +25,7 @@
   transition: font-weight 0.3s ease;
 }
 
-.mobile-menu-content h3.active {
+.nav-item-mobile.active {
   font-weight: 700;
   color: var(--primary-color-background);
 }

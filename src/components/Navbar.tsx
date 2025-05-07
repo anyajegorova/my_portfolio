@@ -4,57 +4,71 @@ import { ActiveSectionContext } from '../context/ActiveSectionContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenu from './MobileMenu';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = ({ isVisible, handleAboutScroll, handleProjectScroll, handleContactScroll }) => {
     const { activeSection } = useContext(ActiveSectionContext);
     const { t } = useTranslation();
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const navigate = useNavigate();
 
     const toggleMobileMenu = () => {
-        setMobileMenuOpen(!isMobileMenuOpen);
+        setMobileMenuOpen(prev => !prev);
+    };
+
+    const navigateToSection = (section: string) => {
+        navigate('/', { state: { scrollTo: section } });
+        setMobileMenuOpen(false); // ensure menu closes on mobile
     };
 
     return (
         <nav className={`navigation ${isVisible ? 'visible' : 'hidden'}`}>
             <div className={`nav_link ${activeSection === 'about' ? 'active' : ''}`}>
-                <Link to="/" className="logo" onClick={handleAboutScroll}>
+                <button className="logo" onClick={() => navigateToSection('about')}>
                     {t('navbar.logo')}
-                </Link>
+                </button>
             </div>
+
             <div className='nav_link_language_switcher_wrapper'>
+                {/* Desktop Menu */}
                 <div className="desktop-menu">
                     <div className={`nav_link ${activeSection === 'about' ? 'active' : ''}`}>
-                        <Link to="/" className="nav-item" onClick={handleAboutScroll}>
+                        <button className="nav-item" onClick={() => navigateToSection('about')}>
                             {t('navbar.about')}
-                        </Link>
+                        </button>
                     </div>
                     <div className={`nav_link ${activeSection === 'projects' ? 'active' : ''}`}>
-                        <Link to="/" className="nav-item" onClick={handleProjectScroll}>
+                        <button className="nav-item" onClick={() => navigateToSection('projects')}>
                             {t('navbar.projects')}
-                        </Link>
+                        </button>
                     </div>
                     <div className={`nav_link ${activeSection === 'contact' ? 'active' : ''}`}>
-                        <Link to="/" className="nav-item" onClick={handleContactScroll}>
+                        <button className="nav-item" onClick={() => navigateToSection('contact')}>
                             {t('navbar.contact')}
-                        </Link>
+                        </button>
                     </div>
                 </div>
-                <div className='language_switcher_navigation'><LanguageSwitcher /></div>
+
+                {/* Language Switcher */}
+                <div className='language_switcher_navigation'>
+                    <LanguageSwitcher />
+                </div>
+
+                {/* Mobile Menu Toggle */}
                 <div className="mobile-menu">
                     <button className="hamburger" onClick={toggleMobileMenu}>
                         ☰
                     </button>
                 </div>
+
+                {/* Mobile Menu Content */}
                 {isMobileMenuOpen && (
                     <MobileMenu
-                        handleAboutScroll={handleAboutScroll}
-                        handleProjectScroll={handleProjectScroll}
-                        handleContactScroll={handleContactScroll}
-                        closeMenu={toggleMobileMenu}                  />
+                        navigateToSection={navigateToSection}
+                        closeMenu={toggleMobileMenu}
+                    />
                 )}
             </div>
-
         </nav>
     );
 };

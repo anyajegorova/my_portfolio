@@ -6,16 +6,16 @@ import ProjectCard from '../components/ProjectCard';
 import { useTranslation } from 'react-i18next';
 
 interface ProjectsProps {
-    anchorRef: React.RefObject<HTMLElement>;
+    anchorRef?: React.RefObject<HTMLElement>;
     onImageClick: (image: string) => void;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ anchorRef, onImageClick }) => {
+const Projects: React.FC<ProjectsProps> = ({ onImageClick }) => {
     const { t } = useTranslation();
     const imageRef = useRef(null);
 
     return (
-        <section className='projects_section' ref={anchorRef}>
+        <section className='projects_section' >
             <div>
                 <h1 className='projects_title'>{t('projects.title')}</h1>
             </div>

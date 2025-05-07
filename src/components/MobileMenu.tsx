@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { ActiveSectionContext } from '../context/ActiveSectionContext';
 import { Link } from 'react-router-dom';
 
-const MobileMenu = ({ handleAboutScroll, handleProjectScroll, handleContactScroll, closeMenu }) => {
+const MobileMenu = ({ navigateToSection, closeMenu }) => {
     const { t } = useTranslation();
     const { activeSection } = useContext(ActiveSectionContext);
 
@@ -15,35 +15,40 @@ const MobileMenu = ({ handleAboutScroll, handleProjectScroll, handleContactScrol
         };
     }, []);
 
-    const handleClick = (scrollFunction) => {
-        scrollFunction();
-        closeMenu();
-    };
-
     return (
         <div className="mobile-menu-overlay">
             <div className="mobile-menu-content">
-                <h3
-                    className={activeSection === 'about' ? 'active' : ''}
-
-                >
-                    <Link to="/" className="nav-item" onClick={() => handleClick(handleAboutScroll)}>
+                <h3>
+                    <button
+                        onClick={() => navigateToSection('about')}
+                        className={`nav-item-mobile ${activeSection === 'about' ? 'active' : ''}`}
+                    >
                         {t('navbar.about')}
-                    </Link>
+                    </button>
                 </h3>
-                <h3
-                    className={activeSection === 'projects' ? 'active' : ''}
-
-                >
-                    <Link to="/" className="nav-item" onClick={() => handleClick(handleProjectScroll)}>
+                <h3>
+                    <button
+                        onClick={() => navigateToSection('projects')}
+                        className={`nav-item-mobile ${activeSection === 'projects' ? 'active' : ''}`}
+                    >
                         {t('navbar.projects')}
-                    </Link>
+                    </button>
                 </h3>
-                <h3
-                    className={activeSection === 'contact' ? 'active' : ''}
-                >
-                    <Link to="/" className="nav-item" onClick={() => handleClick(handleContactScroll)}>
+                <h3>
+                    <button
+                        onClick={() => navigateToSection('contact')}
+                        className={`nav-item-mobile ${activeSection === 'contact' ? 'active' : ''}`}
+                    >
                         {t('navbar.contact')}
+                    </button>
+                </h3>
+                <h3>
+                    <Link
+                        to="/privacy-policy"
+                        onClick={closeMenu}
+                        className={`nav-item-mobile ${activeSection === 'privacy-policy' ? 'active' : ''}`}
+                    >
+                        {t('navbar.privacyPolicy')}
                     </Link>
                 </h3>
                 <button className="close-button" onClick={closeMenu}>✕</button>

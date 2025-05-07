@@ -5,7 +5,8 @@
           "logo": "ANNA JEGOROVA",
           "about": "About",
           "projects": "Works",
-          "contact": "Contact"
+          "contact": "Contact",
+          "privacyPolicy": "Privacy Policy"
         },
         "projects": {
           "title": "Works",
@@ -124,7 +125,8 @@
           "logo": "ANNA JEGOROVA",
           "about": "Tietoa",
           "projects": "Työt",
-          "contact": "Ota yhteyttä"
+          "contact": "Ota yhteyttä",
+          "privacyPolicy": "Tietosuojakäytäntö"
         },
         "projects": {
           "title": "Työt",
